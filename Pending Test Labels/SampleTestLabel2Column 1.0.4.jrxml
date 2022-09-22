@@ -60,10 +60,9 @@
 			</style>
 		</conditionalStyle>
 	</style>
-	<parameter name="SAMPLEGUID" class="java.util.List" isForPrompting="false">
+	<parameter name="SAMPLEGUID" class="java.util.List">
 		<parameterDescription><![CDATA[]]></parameterDescription>
 	</parameter>
-	<parameter name="EXAMPLE" class="java.lang.String" isForPrompting="false"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT Distinct
 ps.formulationid || nchr(160) || ps.batchnumber AS FORMULATION,
@@ -209,8 +208,7 @@ FROM
 
 WHERE
 
-ps.BATCHNUMBER = '277-0011'
---(select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE $X{IN,ps1.sampleguid,SAMPLEGUID})
+ps.BATCHNUMBER = (select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE $X{IN,ps1.sampleguid,SAMPLEGUID})
 
 AND (t.status = 100 OR t.status = 500)
     AND (
@@ -248,7 +246,6 @@ ASC]]>
 		<variableExpression><![CDATA["1.0.2"]]></variableExpression>
 		<initialValueExpression><![CDATA[]]></initialValueExpression>
 	</variable>
-	<variable name="EXAMPLE" class="java.lang.String"/>
 	<columnHeader>
 		<band height="11">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
