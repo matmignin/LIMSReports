@@ -127,10 +127,14 @@ ListAGG(DECODE(t.testid,
     'Soy Allergen', 'Soy ',
     'Walnut Allergen', 'Walnut ',
     'Fish Allergen', 'Fish ',
-     'Pantothenic Acid UPLC', 'Pantothenic Acid:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2'),
+     'Pantothenic Acid UPLC', 'Pantothenic'||NCHR(160)||'Acid:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2'),
      'Probiotics', '',
-    'Vitamin A', 'Vitamin A:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '),
-    'Vitamin B12', 'Vitamin B12:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2'),
+    'Vitamin A', 'Vitamin'||NCHR(160)||'A:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '),
+    'Vitamin D', 'Vitamin'||NCHR(160)||'D:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '),
+    'Vitamin E', 'Vitamin'||NCHR(160)||'E:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '),
+    'Vitamin K', 'Vitamin'||NCHR(160)||'K:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '),
+
+    'Vitamin B12', 'Vitamin'||NCHR(160)||'B12:'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2'),
     'Minerals', CHR(9)||DECODE(tr.resultid,
         'Boron', 'B',
         'Calcium', 'Ca',
@@ -232,7 +236,7 @@ WHEN METHOD LIKE 'Heavy Metal%'
 WHEN METHOD LIKE 'Minerals'
     THEN '2'
 When METHOD LIKE '%Send Out%'
-    THEN 'z'
+    THEN '100'
 ELSE
 	METHOD
 END
@@ -268,7 +272,7 @@ ASC]]>
 				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="64" y="0" width="56" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
-				<box leftPadding="1" bottomPadding="2" rightPadding="0">
+				<box leftPadding="1" bottomPadding="2" rightPadding="1">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
