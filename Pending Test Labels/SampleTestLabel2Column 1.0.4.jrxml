@@ -10,7 +10,7 @@
 	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="787"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="595"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="396"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TST"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PRD"/>
 	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
@@ -217,14 +217,12 @@ ps.BATCHNUMBER = (select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE 
 AND (t.status = 100 OR t.status = 500)
     AND (
       (tr.flagvalid <> 'N' AND t.testid <> 'Minerals')
-      OR(
+      OR(t.testid = 'Minerals' AND
           (','||SUbstr(tr.REASONFORCHANGE, 54)||','  LIKE '%,'||tr.GENERICNUM05||',%'AND tr.RESULTVALUATION = 'SKIP LOT' AND tr.flagvalid <> 'N')
-          OR (tr.COMMENTS IS NOT NULL AND tr.flagvalid <>  'N')
-          OR (tr.flagvalid = 'Y' AND tr.Motivation = 'Skip Lot')
+          OR (tr.COMMENTS like '%est%' AND tr.flagvalid <>  'N')
           OR (tr.flagvalid = 'Y' AND resultValuation is null)
-          AND t.testid = 'Minerals'
-        )
       )
+    )
 
 
 ORDER BY
@@ -253,8 +251,9 @@ ASC]]>
 	<columnHeader>
 		<band height="11">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="64" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3009bd98-6c91-4712-be7f-5446cf081d2a">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="62" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3009bd98-6c91-4712-be7f-5446cf081d2a">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<box leftPadding="2" rightPadding="1">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -269,7 +268,7 @@ ASC]]>
 				<textFieldExpression><![CDATA[$F{FORMULATION}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="64" y="0" width="56" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="62" y="0" width="58" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
 				<box leftPadding="1" bottomPadding="2" rightPadding="1">
@@ -279,10 +278,10 @@ ASC]]>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Bottom" rotation="None">
-					<font fontName="LMS Arial" size="8" isBold="false" isItalic="true" isUnderline="false"/>
+					<font fontName="LMS Times NR" size="8" isBold="true" isItalic="false" isUnderline="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{SERVINGSIZE}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{SERVINGSIZE}.trim()]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
