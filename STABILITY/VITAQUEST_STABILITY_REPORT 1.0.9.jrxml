@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertificateOfAnalysis" pageWidth="792" pageHeight="612" orientation="Landscape" whenNoDataType="NoDataSection" columnWidth="762" leftMargin="10" rightMargin="20" topMargin="20" bottomMargin="10" uuid="a503fc4b-3d0d-4afc-930b-adfe302a6e09">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PRD"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="208"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="784"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="613"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="377"/>
+	<style name="Table 1_CH" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineColor="#000000"/>
+			<rightPen lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#EEEEEE">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#DDDDDD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+		<conditionalStyle>
+			<style backcolor="#EEEEEE"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#DDDDDD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+		<conditionalStyle>
+			<style backcolor="#EEEEEE"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Results Cells" mode="Opaque" forecolor="#000000" backcolor="#FFFFFF" hTextAlign="Center" vTextAlign="Middle" isBlankWhenNull="true">
+		<pen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+		<box>
+			<pen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[OR($V{RESULT_MEASURE}.equals(" "),$V{RESULT_MEASURE}.equals("pulled"))]]></conditionExpression>
+			<style mode="Opaque" forecolor="#DDDDDD" backcolor="#DDDDDD" isBlankWhenNull="false">
+				<pen lineColor="#EEEEEE"/>
+				<box>
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{RESULT_MEASURE} == null]]></conditionExpression>
+			<style mode="Opaque" forecolor="#CCCCCC" backcolor="#CCCCCC" fill="Solid" isBlankWhenNull="true">
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{RESULT_MEASURE}.equals("Pending")]]></conditionExpression>
+			<style forecolor="#212CFF" backcolor="#FFFFFF" fontName="LMS Arial" fontSize="12" isBold="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="RowHeader" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Room Conditions" whenResourceMissingType="Key" uuid="98eb6e07-684d-4838-8e28-809880dbbf4b">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PRD"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="616"/>
+		<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="374"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="249"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="745"/>
+		<parameter name="BATCHNUMBER" class="java.lang.String">
+			<parameterDescription><![CDATA[BATCHNUMBER]]></parameterDescription>
+		</parameter>
+		<parameter name="CONDITION" class="java.lang.String">
+			<parameterDescription><![CDATA[CONDITION]]></parameterDescription>
+		</parameter>
+		<parameter name="COA_REVIEWED_DATE" class="java.lang.String" evaluationTime="Early">
+			<parameterDescription><![CDATA[COA_REVIEWED_DATE]]></parameterDescription>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[SELECT DISTINCT
+stb.interval_Hours AS TIME_ORDER,
+stb.studyname,
+to_char(to_date(substr(
+  (  SELECT
+      Distinct
+     Min(DateScheduled)
+    FROM
+      SLIM.VIEW_LMS_REPORTS@LMS_STABILITY_DATA  
+    WHERE
+      BATCHNAME = $P{BATCHNUMBER}
+      AND   Timepoint  = stb.timepoint   
+      AND RESULTACTIVE = 'Y')
+, 1), 'DD-MON-YYYY'),'MM/DD/YY')  || CHR(10) || stb.timepoint AS DATESCHEDULED,
+stb.testsequence || TO_CHAR(stb.resultsequence, 'fm00') AS TESTING_order,
+--stb.resultname AS TESTING,
+Decode(stb.resultname,i.generic3,stb.resultname||' '||i.generic2,stb.resultname)  AS TESTING, --1.08
+stb.resulttextspec AS SPECIFICATION_RANGE,
+REPLACE(stb.testdefaultmethodid,'Stability','') AS method,
+
+stb.stgconditionname AS CONDITION,
+CASE
+    WHEN stb.sampletempname LIKE '%Micro%'
+    THEN 'Microbiological'
+    WHEN stb.sampletempname LIKE  '%Analytical%'
+        THEN 'Analytical'
+    WHEN stb.sampletempname LIKE '%Physical%'
+        THEN 'Physical'
+    END AS DEPARTMENT,
+
+    CASE
+        WHEN stb.sampletempname LIKE '%Physical%' THEN 1
+        WHEN stb.sampletempname LIKE '%Micro%' THEN 3
+        WHEN stb.sampletempname LIKE  '%Analytical%' THEN 2
+    END AS DEPARTMENT_ORDER,
+
+CASE
+        WHEN tr.RESULTTYPE = 'NUMERIC'
+             AND ps.SAMPLEID = stb.LMS_SAMPLEID
+             AND (tr.STATUS = 80 OR tr.STATUS = 70)
+             THEN tr.numericalresulttext
+            || decode(tr.unit, '', '', ' ' || tr.unit)
+        WHEN tr.resulttype IN ( 'LIST', 'TEXT' )
+             AND ps.SAMPLEID = stb.LMS_SAMPLEID
+             AND (tr.STATUS = 80  OR tr.STATUS = 70) 
+             THEN
+            tr.TEXTRESULT
+            || decode(tr.unit, '', '', ' ' || tr.unit)
+        WHEN tr.STATUS = 10 AND $P{COA_REVIEWED_DATE} IS NOT NULL
+            THEN 'pulled'
+        WHEN tr.STATUS = 10 AND $P{COA_REVIEWED_DATE} IS NULL
+            THEN 'Pending'
+        WHEN tr.resulttype = 'FREETEXT'
+             AND ps.SAMPLEID = stb.LMS_SAMPLEID
+             AND ( tr.status = 80 OR tr.STATUS = 70)
+    THEN
+            tr.textresult
+        ELSE
+            ' '
+    END AS RESULT
+
+
+FROM
+ SLIM.VIEW_LMS_REPORTS@LMS_STABILITY_DATA stb
+LEFT JOIN Test t ON t.slimobjectid = stb.testid 
+			AND t.TESTID = STB.TESTNAME
+LEFT JOIN physicalsample ps ON  ps.SLIMOBJECTID = stb.LWR_ID
+    AND stb.LMS_SAMPLEID = ps.sampleid
+    AND ps.BATCHNUMBER= stb.BATCHNAME
+			AND T.TESTID = stb.testname
+			AND PS.SUBMISSIONID = T.SUBMISSIONID
+			AND ps.STABILITYTIMEPOINT = stb.TIMEPOINT
+LEFT JOIN testresult tr ON tr.testguid = t.testguid
+			AND tr.SLIMOBJECTID = STB.RESULTID
+LEFT Join Formulation f ON f.Productid = STB.productname   --1.08
+LEFT JOIN Ingredient i ON i.formulationguid = f.formulationguid --1.08
+			AND i.deletion <> 'Y' 			--1.08
+			AND UPPER(i.ingredientID) LIKE 'STABILITY NOTE%' --1.08
+			AND STB.resultname = i.generic3     --1.08
+
+
+WHERE
+stb.BATCHNAME =$P{BATCHNUMBER}
+AND
+(stb.stgconditionname Like '%'||DECODE($P{CONDITION},'Room Temperature and Accelerated','RH ± 5% RH',$P{CONDITION})||'%' OR stb.timepoint like '%initial%' OR stb.stgconditionname like '%not stored%'
+)
+	AND stb.RESULTACTIVE <> 'N' 
+
+	ORDER BY TIME_ORDER]]>
+		</queryString>
+		<field name="TIME_ORDER" class="java.math.BigDecimal"/>
+		<field name="STUDYNAME" class="java.lang.String"/>
+		<field name="DATESCHEDULED" class="java.lang.String"/>
+		<field name="TESTING_ORDER" class="java.lang.String"/>
+		<field name="TESTING" class="java.lang.String"/>
+		<field name="SPECIFICATION_RANGE" class="java.lang.String"/>
+		<field name="METHOD" class="java.lang.String"/>
+		<field name="CONDITION" class="java.lang.String"/>
+		<field name="DEPARTMENT" class="java.lang.String"/>
+		<field name="DEPARTMENT_ORDER" class="java.math.BigDecimal"/>
+		<field name="RESULT" class="java.lang.String"/>
+		<sortField name="TIME_ORDER"/>
+	</subDataset>
+	<scriptlet name="DateTimeScriptlet" class="scriptlets.DateTimeScriptlet">
+		<scriptletDescription><![CDATA[]]></scriptletDescription>
+	</scriptlet>
+	<parameter name="USERID" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOCAL_TIME_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PARAM_BN" class="java.util.List" isForPrompting="false"/>
+	<parameter name="REQUESTGUID" class="java.util.List" isForPrompting="false">
+		<parameterDescription><![CDATA[REQUESTGUID]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT DISTINCT
+    trq.requestguid,
+
+    Decode(coa_results.formulationid,trq.formulationid,coa_results.Formulationid,trq.formulationid) AS formulationid,
+    p.tradename                                                                                     AS tradename,  
+    ps.batchnumber                                                                                  As batchnumber,
+    stb.core_batch                                                                                  AS stability_core_batch,
+    regexp_replace(f.generic1, 'each.*\w*(\(\d*\).*).contain.', '\1', 1, 1,'i')	                    AS serving_size, 
+    f.generic4                                                                                      AS fill_weight,
+    decode(stb.core_batch, ps.batchnumber,null, coa_results.coated)                                AS coated_lot,
+            (
+            SELECT DISTINCT
+                LISTAGG(generic01, ', ') WITHIN GROUP(ORDER BY batchnumber)
+            FROM
+                physicalsample
+            WHERE
+                batchnumber = ps.batchnumber
+                                                                                                    )AS package_lot,
+            Coa_results.lot                                                                         AS stability_lot,
+    CASE
+        WHEN trq.storagecondition IS NOT NULL THEN
+            trq.storagecondition
+        ELSE
+            CASE
+                WHEN ps.studyname LIKE '%RT/ACC%' THEN
+                    'Room Temperature and Accelerated'
+                WHEN ps.studyname LIKE '%ACC%' THEN
+                    '40°C ± 2°C/75% RH ± 5% RH'
+                WHEN ps.studyname LIKE '%RT%' THEN
+                    '25°C ± 2°C/60% RH ± 5% RH'
+            END
+    END                                                                                             AS condition,
+    decode(coa_results.formulationid, NULL, stb.customer, coa_results.generic02)                    AS ship_to,
+    to_char(to_date(substr(coa_sign.completed_date, 1, 8), 'YYYYMMDD'), 'MM/DD/YYYY')               AS coa_completed_date,
+    to_char(to_date(substr(coa_sign.finished_date, 1, 8), 'YYYYMMDD'), 'MM/DD/YYYY')                AS coa_reviewed_date,
+    coa_results.manufacture_date,
+    coa_results.expiration_date,
+    coa_results.carton_lot,
+    coa_sign.approvedby                                                                             AS completedby_userid,
+    e.employeetitle                                                                                 AS completedby_title,
+    e.employeefirstname|| ' ' || e.employeename                                                     AS completedby_name,
+    coa_sign.reviewedby                                                                             AS reviewedby_userid,
+    e2.employeetitle                                                                                AS reviewedby_title,
+    e2.employeefirstname|| ' ' || e2.employeename                                                   AS reviewedby_name,
+    (Select listagg(i2.generic2||' '||i2.description, chr(10)) Within GROUP (ORDER BY i2.position)
+            FROM Formulation f2
+            JOIN Ingredient i2 ON i2.FormulationGUID = f2.FormulationGUID
+
+            where f2.productid = PS.Product
+            and i2.Deletion <>'Y'
+            AND UPPER(i2.IngredientID) like 'STABILITY NOTE %')                                     AS Stability_Note, --1.0.8
+    (
+        SELECT
+            dv.description
+        FROM
+            domainvalue dv
+        WHERE
+                upper(dv.domainid) = 'REPORT PARAMETERS'
+            AND upper(dv.value) = 'DATE FORMAT'
+            AND dv.deletion = 'N'
+    )report_date_format
+FROM
+         testrequest trq
+    JOIN (
+        SELECT DISTINCT
+            t.requestguid,
+            ts.sampleguid
+        FROM
+                 testsample ts
+            JOIN test t ON t.testguid = ts.testguid
+                           AND t.deletion = 'N'
+        WHERE
+            ts.deletion = 'N'
+        UNION
+        SELECT
+            rs.requestguid,
+            rs.sampleguid
+        FROM
+            requestsample rs
+        WHERE
+            rs.deletion = 'N'
+    )              rs ON rs.requestguid = trq.requestguid
+    JOIN physicalsample ps ON ps.sampleguid = rs.sampleguid
+    LEFT JOIN product p ON p.productid = trq.product
+                        AND p.deletion = 'N'
+    LEFT JOIN formulation f ON f.productid = p.productid
+                        AND f.deletion = 'N'
+    LEFT JOIN (
+        SELECT
+            lwr_id,
+            batchname                                                                               AS coated,
+            lms_sampleid,
+            formulationname                                                                         AS formulation,
+            productdesc                                                                             AS customer,
+            substr(batchdesc, 10)                                                                   AS batch,
+            regexp_substr(batchdesc, '(\d{3}-\d{4})', 1, 1,'i')	             AS Core_batch,
+            REGEXP_substr(studydesc, '([0-9/a-z]){5,}',1,1,'i')              AS lot
+            ---                 regexp_substr(batchdesc, '(\d{3}-\d{4})', 1, 1,'i')	                                    AS Core_batch,
+        FROM
+            slim.view_lms_reports@lms_stability_data
+        WHERE
+            lms_sampleid IS NOT NULL
+                                                                                                    )stb 
+            ON ps.slimobjectid = stb.lwr_id
+            -- AND stb.lms_sampleid = ps.sampleid
+             --OR ps.batchnumber = stb.coated
+    LEFT JOIN (
+        SELECT
+            trs.requestguid,
+            MAX(trs.circulationid)                                                                  AS max_circulationid,
+            t.executeby                                                                             AS approvedby,
+            t.finishedby                                                                            AS reviewedby,
+            MAX(t.finisheddate)                                                                     AS finished_date,
+            MAX(t.completedate)                                                                     AS completed_date
+        FROM
+                 testrequestsign trs
+            JOIN test t ON t.requestguid = trs.requestguid
+                           AND t.testgroup = 'Stability'
+                           AND t.deletion = 'N'
+                           AND t.executeby IS NOT NULL
+        GROUP BY
+            trs.requestguid,
+            t.executeby,
+            t.finishedby,
+            t.completedate,
+            t.finisheddate
+    ) coa_sign ON coa_sign.requestguid = trq.requestguid
+    LEFT JOIN employee e ON e.empid = coa_sign.approvedby
+    LEFT JOIN employee e2 ON e2.empid = coa_sign.reviewedby
+    LEFT JOIN (
+        SELECT DISTINCT
+            ps.batchnumber,
+            ps.generic01              															    AS Lot,
+            ps.generic02,
+            tr3.textresult 																		    AS Carton_Lot,
+            ps.generic04,
+            ps.generic06                                                                            AS coated,
+            trq.product,
+            trq.formulationid,
+            to_char(to_date(substr(tr1.textresult, 1, 8), 'YYYYMMDD'), 'MM/DD/YYYY')                AS manufacture_date,
+            to_char(to_date(substr(tr2.textresult, 1, 8), 'YYYYMMDD'), 
+            		decode(tr5.textresult, '', 'MM/DD/YYYY', tr5.textresult)) 					    AS expiration_date,
+            tr6.textresult                                                                          AS customer_lot
+        FROM
+                 testrequest trq
+            JOIN requestsample  rs ON rs.requestguid = trq.requestguid
+                                     AND rs.deletion = 'N'
+            JOIN physicalsample ps ON ps.sampleguid = rs.sampleguid
+            JOIN test t ON t.requestguid = trq.requestguid
+                               AND t.testgroup = 'COA'
+                               AND t.deletion = 'N'
+            JOIN testresult tr1 ON tr1.testguid = t.testguid
+                               AND tr1.resultid = 'Manufacture Date'
+                               AND tr1.resultvaluation = 'OK'
+                               AND tr1.deletion = 'N'
+            JOIN testresult tr2 ON tr2.testguid = t.testguid
+                               AND tr2.resultid = 'Expiration Date'
+                               AND tr2.resultvaluation = 'OK'
+                               AND tr2.deletion = 'N'
+            LEFT JOIN testresult tr3
+                                ON tr3.testguid = t.testguid AND
+                                tr3.resultid = 'Carton Lot' AND
+                                tr3.deletion = 'N'
+            LEFT JOIN testresult tr5 ON tr5.testguid = t.testguid
+                               AND tr5.resultid = 'Expiration Date Format'
+                               AND tr5.resultvaluation = 'OK'
+                               AND tr5.deletion = 'N'
+            LEFT JOIN testresult tr6 ON tr6.testguid = t.testguid
+                               AND tr6.resultid = 'Customer Lot'
+                               AND tr6.resultvaluation = 'OK'
+                               AND tr6.deletion = 'N'
+        WHERE
+        substr(trq.batchnumber,1,8) = substr(ps.batchnumber,1,8)
+      --  AND trq.product IS NOT NULL
+       AND trq.formulationid IS NOT NULL
+                                                                                                    ) coa_results 
+            ON (substr(coa_results.batchnumber,1,8) = substr(ps.batchnumber,1,8 )
+	           OR coa_results.product = trq.product)
+            -- AND coa_results.formulationid = trq.formulationid
+            AND ( substr(coa_results.batchnumber,1,8) = substr(ps.batchnumber,1,8 ) 
+                    OR substr(coa_results.coated,1,8) = substr(ps.batchnumber,1,8 ))
+            AND (( ps.generic01 IS NOT NULL 
+                    AND coa_results.lot = ps.generic01 ) 
+                    OR ps.generic01 IS NULL )
+            AND (( ps.generic04 IS NOT NULL
+                    AND coa_results.generic04 = ps.generic04 )
+                    OR ps.generic04 IS NULL )
+
+
+
+            
+WHERE
+--trq.requestguid =
+--'f5863713-a754-4ba8-91c0-7b79e1fab50f' -- K887 flipped coated lot 
+--'af5f4ad7-12d9-48f9-875f-c467a7b1a140' -- K929 extra batch name
+--'0c6f1ad4-b05f-437a-80bb-a0cc2efe5385' -- K992 same batch number as K929 (mulitple lots)
+--'1b510993-6284-4928-8de0-6ef464fbdcbf' --K275 
+--'76cd83a6-cb8f-4777-86bd-938997696347' --K837
+--'cc7d1945-7ec2-452a-8f25-43c78ab43b56' --I860
+--'4cd443ec-13d7-446f-b8e2-adf21449c0a2'  --K277
+--'1f5c0188-200e-45dc-b445-badb9079892c' --K158 probiotic
+$X{IN,trq.requestguid,REQUESTGUID}  
+order by coa_completed_date desc 
+fetch first 1 rows only]]>
+	</queryString>
+	<field name="REQUESTGUID" class="java.lang.String"/>
+	<field name="STABILITY_NOTE" class="java.lang.String"/>
+	<field name="FORMULATIONID" class="java.lang.String"/>
+	<field name="TRADENAME" class="java.lang.String"/>
+	<field name="BATCHNUMBER" class="java.lang.String"/>
+	<field name="STABILITY_CORE_BATCH" class="java.lang.String"/>
+	<field name="SERVING_SIZE" class="java.lang.String"/>
+	<field name="FILL_WEIGHT" class="java.lang.String"/>
+	<field name="COATED_LOT" class="java.lang.String"/>
+	<field name="PACKAGE_LOT" class="java.lang.String"/>
+	<field name="STABILITY_LOT" class="java.lang.String"/>
+	<field name="CONDITION" class="java.lang.String"/>
+	<field name="SHIP_TO" class="java.lang.String"/>
+	<field name="COA_COMPLETED_DATE" class="java.lang.String"/>
+	<field name="COA_REVIEWED_DATE" class="java.lang.String"/>
+	<field name="MANUFACTURE_DATE" class="java.lang.String"/>
+	<field name="EXPIRATION_DATE" class="java.lang.String"/>
+	<field name="CARTON_LOT" class="java.lang.String"/>
+	<field name="COMPLETEDBY_USERID" class="java.lang.String"/>
+	<field name="COMPLETEDBY_TITLE" class="java.lang.String"/>
+	<field name="COMPLETEDBY_NAME" class="java.lang.String"/>
+	<field name="REVIEWEDBY_USERID" class="java.lang.String"/>
+	<field name="REVIEWEDBY_TITLE" class="java.lang.String"/>
+	<field name="REVIEWEDBY_NAME" class="java.lang.String"/>
+	<field name="REPORT_DATE_FORMAT" class="java.lang.String"/>
+	<variable name="REPORT_VERSION" class="java.lang.String">
+		<variableExpression><![CDATA["1.3.2"]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<variable name="CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Group" resetGroup="ProductGroup" incrementType="Page">
+		<variableExpression><![CDATA[$V{PAGE_COUNT}]]></variableExpression>
+	</variable>
+	<group name="ProductGroup">
+		<groupHeader>
+			<band height="46">
+				<staticText>
+					<reportElement x="4" y="18" width="64" height="16" uuid="90bc1d64-808c-47e0-82ab-0703937083ee"/>
+					<box leftPadding="0"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Product:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement x="68" y="18" width="454" height="16" uuid="f3857ff6-e7d0-4a90-9442-085a7064de11"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TRADENAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement x="68" y="3" width="220" height="16" uuid="72f83299-0ed3-4cb2-9dc4-8458cef3f8de"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SHIP_TO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="3" width="64" height="16" uuid="e0470f8a-6456-4d2d-9fc6-0d14cd37d7f3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Customer:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="474" y="0" width="140" height="16" isRemoveLineWhenBlank="true" uuid="5528bb6e-e9eb-4cfb-8047-7b5a8fe4c7c2"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{COATED_LOT}==null?$F{CARTON_LOT}:$F{COATED_LOT})]]></textFieldExpression>
+				</textField>
+				<line direction="BottomUp">
+					<reportElement x="0" y="34" width="769" height="1" forecolor="#AAAAAA" uuid="53917393-0295-4f96-87da-00836f292403"/>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement x="474" y="-32" width="140" height="16" uuid="ec69c7ba-8695-4cc1-8a20-c9833372fd74"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{STABILITY_CORE_BATCH}!=null?$F{STABILITY_CORE_BATCH}:$F{BATCHNUMBER}.substring(0,8))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="382" y="-32" width="90" height="16" uuid="0c06cb83-f994-4aca-81af-c3a9cbf72362"/>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Batch:]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Transparent" x="401" y="-16" width="71" height="16" forecolor="#000000" backcolor="#FFFFFF" uuid="4dcd13af-301e-453b-b234-cfdbb7d7d052"/>
+					<box padding="0" topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="Times NR LMS" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingAfter="0" tabStopWidth="40"/>
+					</textElement>
+					<textFieldExpression><![CDATA[(AND($F{PACKAGE_LOT}==null,$F{STABILITY_LOT}==null)?"":"Package Lot:")]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="474" y="-16" width="153" height="16" uuid="550c8964-551b-486b-bd29-dc35c079e544"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{STABILITY_CORE_BATCH}!=null||$F{PACKAGE_LOT}==null?$F{STABILITY_LOT}:$F{PACKAGE_LOT})]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="164" y="-31" width="218" height="16" forecolor="#AF0136" uuid="7fc104ff-6b7e-4571-a9b1-b089696492b3"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="LMS Times NR" size="13" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CONDITION}=="RH"?"Room Temperature and Accelerated":$F{CONDITION})]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="681" y="-16" width="81" height="16" uuid="6c5129f3-4cbe-4ad8-8cd4-697cc0f0834c"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EXPIRATION_DATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="" x="627" y="-16" width="52" height="16" uuid="6cf1c862-29d1-4fd1-9db0-690feb1b1835">
+						<printWhenExpression><![CDATA[$F{EXPIRATION_DATE}!=null]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Exp Date:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="681" y="-32" width="81" height="16" uuid="bdda4231-1cf7-4927-bbcd-9ddc0d409e12"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MANUFACTURE_DATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="627" y="-32" width="52" height="16" uuid="8e39b4d7-1d3b-4228-b852-c60dcf53daff">
+						<printWhenExpression><![CDATA[$F{MANUFACTURE_DATE}!=null]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mfg Date:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="523" y="17" width="232" height="16" uuid="6b7f37ac-688b-47a5-91f5-51064ae41c4a"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{FILL_WEIGHT}==null?"Serving Size: " + $F{SERVING_SIZE}:"Packaging Quantity: " + $F{FILL_WEIGHT})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="4" y="-12" width="64" height="16" uuid="3cf8eab8-9be8-4bf5-80e0-8969c3a99eb1"/>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Formulation:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="68" y="-12" width="140" height="16" uuid="27cff2ab-af59-4103-bfcf-cb4ec33755f8"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FORMULATIONID}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="681" y="1" width="81" height="16" isRemoveLineWhenBlank="true" uuid="73d842f2-c750-46ea-9e9c-34ef9996376a">
+						<printWhenExpression><![CDATA[AND($F{COATED_LOT}!=null, $F{CARTON_LOT}!=null)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CARTON_LOT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="618" y="1" width="61" height="16" isRemoveLineWhenBlank="true" uuid="bb508b96-d81c-4361-b5e8-96141f14639a">
+						<printWhenExpression><![CDATA[AND($F{COATED_LOT}!=null, $F{CARTON_LOT}!=null)]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="0">
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times NR LMS" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Carton Lot:]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Transparent" x="382" y="0" width="90" height="16" forecolor="#000000" backcolor="#FFFFFF" uuid="ade83342-d59d-4f7d-9519-3b7b1195f889">
+						<printWhenExpression><![CDATA[OR($F{COATED_LOT}!=null,$F{CARTON_LOT}!=null)]]></printWhenExpression>
+					</reportElement>
+					<box padding="0" topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" markup="none">
+						<font fontName="Times NR LMS" size="9" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingAfter="0" tabStopWidth="40"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{COATED_LOT}==null&&$F{CARTON_LOT}!=null?"Carton Lot:":"Coated Lot:")]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="19" splitType="Prevent">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement key="" stretchType="ContainerBottom" isPrintRepeatedValues="false" x="18" y="1" width="668" height="18" isRemoveLineWhenBlank="true" uuid="752d2501-9817-494a-91a7-2cebf6550a9b">
+						<printWhenExpression><![CDATA[$F{STABILITY_NOTE}!=null]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="LMS Times NR" size="8" isItalic="true"/>
+						<paragraph firstLineIndent="0" leftIndent="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{STABILITY_NOTE}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="165" y="-16" width="168" height="30" forecolor="#001188" uuid="271a8191-bf9b-4ab9-ae35-3342bfae6f73"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="LMS Times NR" size="21" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Stability Report]]></text>
+			</staticText>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" isLazy="true" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="-18" y="-18" width="172" height="53" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="4f1fa229-6780-4dee-89f0-f66cc8e6f287">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR})+"Vitaquest.png"]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="754" y="-10" width="12" height="14" uuid="9a0ee1c1-77f6-498c-acf4-733d4c53da62">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Page">
+				<reportElement x="687" y="-10" width="66" height="14" uuid="9d1054ef-c72e-47e6-9033-7d30b09dedc9"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: "+$V{PAGE_NUMBER}+" of "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="55" splitType="Prevent">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<crosstab horizontalPosition="Left" ignoreWidth="false">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="9" width="764" height="45" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="0b8a3b9a-f935-4696-84f0-3404180d4fcb">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value="Room Conditions"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="Room Conditions" uuid="4f8c96be-3417-4122-bad3-7a87b3952a25">
+							<datasetParameter name="BATCHNUMBER">
+								<datasetParameterExpression><![CDATA[$F{BATCHNUMBER}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="CONDITION">
+								<datasetParameterExpression><![CDATA[$F{CONDITION}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="COA_REVIEWED_DATE">
+								<datasetParameterExpression><![CDATA[$F{COA_REVIEWED_DATE}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<crosstabHeaderCell>
+					<cellContents>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+						<staticText>
+							<reportElement positionType="Float" x="20" y="10" width="60" height="10" uuid="eb4d9eec-c709-4409-82f9-adbea3e548a7">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Center">
+								<font fontName="LMS Times NR" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Test]]></text>
+						</staticText>
+						<staticText>
+							<reportElement positionType="Float" x="80" y="10" width="60" height="10" uuid="ed5ee3e6-dabb-426c-a5c7-0d08b284956c">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Center">
+								<font fontName="LMS Times NR" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Method]]></text>
+						</staticText>
+						<staticText>
+							<reportElement positionType="Float" x="140" y="10" width="60" height="10" uuid="83dfeac2-33bd-4aa2-a5f2-fa39189083bc">
+								<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							</reportElement>
+							<textElement textAlignment="Center">
+								<font fontName="LMS Times NR" size="8" isBold="false"/>
+							</textElement>
+							<text><![CDATA[Specification]]></text>
+						</staticText>
+					</cellContents>
+				</crosstabHeaderCell>
+				<rowGroup name="DEPARTMENT_ORDER" width="0" headerPosition="Middle" mergeHeaderCells="true">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{DEPARTMENT_ORDER}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="0" height="0" uuid="315794c8-d32f-4303-ac46-59dbe5a6bfa7"/>
+								<box>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textFieldExpression><![CDATA[$V{DEPARTMENT_ORDER}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="DEPARTMENT" width="20" headerPosition="Stretch" mergeHeaderCells="true">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{DEPARTMENT}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#8F8F8F" mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<pen lineColor="#8F8F8F"/>
+								<topPen lineWidth="1.05" lineColor="#FFFFFF"/>
+								<leftPen lineWidth="1.0" lineColor="#FFFFFF"/>
+								<bottomPen lineWidth="1.05" lineColor="#FFFFFF"/>
+								<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+							</box>
+							<textField>
+								<reportElement key="" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="20" height="25" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" backcolor="#ADAAAA" uuid="5d3fd839-5dac-4257-a464-369372c9e2aa">
+									<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+									<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+									<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+									<property name="com.jaspersoft.layout.grid.weight.y" value="1.5"/>
+									<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+									<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+									<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#8F8F8F"/>
+									<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#8F8F8F"/>
+									<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#8F8F8F"/>
+									<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+									<font fontName="LMS Times NR" size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{DEPARTMENT}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents>
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="f6bdc0c7-13b8-4bfd-960f-57b533daf216"/>
+								<text><![CDATA[Total DEPARTMENT]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="TESTING_ORDER" width="0" headerPosition="Middle" mergeHeaderCells="true">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{TESTING_ORDER}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<box>
+								<pen lineWidth="0.0"/>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement key="" style="RowHeader" positionType="Float" stretchType="RelativeToBandHeight" isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="0" height="25" backcolor="#DDDDDD" uuid="76fa8e3b-c05f-4ac5-9f40-ec6ff22c508b"/>
+								<textElement>
+									<font fontName="LMS Times NR"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{TESTING_ORDER}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents/>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="TESTING" width="60">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{TESTING}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#E0E0E0" mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<textField isStretchWithOverflow="true">
+								<reportElement key="" style="RowHeader" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="60" height="25" isPrintWhenDetailOverflows="true" backcolor="#DDDDDD" uuid="5415758b-8452-41cc-8e58-22cc84f59d42">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<box leftPadding="2" bottomPadding="0" rightPadding="1"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="LMS Times NR" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{TESTING}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents>
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="af53c8e3-3ac6-4d6a-9074-ff749b000f06"/>
+								<text><![CDATA[Total TESTING]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="METHOD" width="60" headerPosition="Stretch">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{METHOD}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#E0E0E0" mode="Opaque">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<textField isStretchWithOverflow="true">
+								<reportElement key="" style="RowHeader" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="60" height="25" isPrintWhenDetailOverflows="true" backcolor="#DDDDDD" uuid="5580835f-4c61-4bcd-b7da-44d26fec751e"/>
+								<box leftPadding="2" bottomPadding="0" rightPadding="1"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="LMS Times NR" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{METHOD}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents>
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="7ec5f68d-8b37-439a-ad33-b82ada90a8da"/>
+								<text><![CDATA[Total METHOD]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<rowGroup name="SPECIFICATION_RANGE" width="60">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{SPECIFICATION_RANGE}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#E0E0E0" mode="Opaque">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+							<box>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="0.5" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textField isStretchWithOverflow="true">
+								<reportElement key="" style="RowHeader" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="60" height="25" isPrintWhenDetailOverflows="true" backcolor="#DDDDDD" uuid="a3f73913-c005-499e-94ea-d5ef3c4d4a08"/>
+								<box leftPadding="2" bottomPadding="0" rightPadding="2">
+									<rightPen lineWidth="1.0" lineColor="#000000"/>
+								</box>
+								<textElement verticalAlignment="Middle" markup="none">
+									<font fontName="LMS Times NR" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{SPECIFICATION_RANGE}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents>
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="1d4b740f-5171-46f6-9847-5543f887f43b"/>
+								<text><![CDATA[Total SPECIFICATION_RANGE]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="TIME_ORDER" height="0" headerPosition="Center" mergeHeaderCells="true">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{TIME_ORDER}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#DEDEDE" mode="Transparent">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+							<box>
+								<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+								<reportElement stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="54" height="0" uuid="9676f5eb-2e04-4139-b5fe-fd52265f392c">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<box leftPadding="0" bottomPadding="0" rightPadding="0">
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Arial Narrow" size="7" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{TIME_ORDER}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents>
+							<staticText>
+								<reportElement x="0" y="0" width="0" height="0" uuid="f5a52935-2891-4e60-8c6b-f45ac7285e24"/>
+								<text><![CDATA[Total TIME_ORDER]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<columnGroup name="DATESCHEDULED" height="20" mergeHeaderCells="true">
+					<bucket order="Descending" class="java.lang.String">
+						<bucketExpression><![CDATA[$F{DATESCHEDULED}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque">
+							<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+							<box>
+								<topPen lineWidth="0.5" lineColor="#000000"/>
+								<leftPen lineWidth="0.5" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineColor="#000000"/>
+								<rightPen lineWidth="0.5" lineColor="#000000"/>
+							</box>
+							<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" mode="Opaque" x="0" y="0" width="54" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" backcolor="#DDDDDD" uuid="1d925490-9c54-4c5a-a0d0-6f29a5c2dcc9">
+									<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+								</reportElement>
+								<box>
+									<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="1.5" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="LMS Times NR" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{DATESCHEDULED}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="RESULT_MEASURE" class="java.lang.String">
+					<measureExpression><![CDATA[$F{RESULT}]]></measureExpression>
+				</measure>
+				<crosstabCell width="54" height="25">
+					<cellContents mode="Opaque">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.grid.JSSGridBagLayout"/>
+						<box>
+							<pen lineColor="#000000"/>
+							<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+						</box>
+						<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+							<reportElement style="Results Cells" positionType="Float" stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="54" height="25" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" printWhenGroupChanges="ProductGroup" uuid="5dc376bf-c97f-455a-ac7e-379bd6f3752e"/>
+							<box leftPadding="1" rightPadding="1">
+								<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+								<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+								<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+							</box>
+							<textElement textAlignment="Center">
+								<font fontName="LMS Times NR" size="6"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{RESULT_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="68" splitType="Stretch">
+			<image scaleImage="RealSize" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="51" y="6" width="154" height="35" uuid="f6d21295-5789-4d05-9043-e762c28c1afa">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR})+$F{COMPLETEDBY_USERID}+".jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="RealSize" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="462" y="6" width="151" height="35" uuid="3936eedb-fe46-4e80-9f3b-dbd2c418b50c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{REVIEWEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR})+$F{REVIEWEDBY_USERID}+".jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="207" y="4" width="298" height="45" isPrintInFirstWholeBand="true" forecolor="#212CFF" uuid="aa0a470c-d1ad-4b9d-9762-9cdd90f3e63d">
+					<printWhenExpression><![CDATA[$F{COA_COMPLETED_DATE}==null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="LMS Times NR" size="32" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.5"/>
+				</textElement>
+				<text><![CDATA[TESTS PENDING]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="2" width="769" height="1" forecolor="#AAAAAA" uuid="89256627-f640-4b43-929b-c8a767d87afa"/>
+			</line>
+			<line>
+				<reportElement x="49" y="37" width="160" height="1" forecolor="#000000" uuid="8a1ce466-9793-4fc4-97dc-53a7c982da7c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="207" y="17" width="122" height="14" uuid="6b1f8f29-f343-445d-a60b-dbbabb922d63">
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_COMPLETED_DATE}==null) ? null :"Date Completed: "+$P{DateTimeScriptlet_SCRIPTLET}.getLocalTime(
+$F{COA_COMPLETED_DATE}, "dd-MMM-yyyy", $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="45" y="38" width="214" height="14" uuid="c84891d8-4240-431b-b708-4493c070e7c3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COMPLETEDBY_NAME}+(($F{COMPLETEDBY_TITLE}!=null)?", "+$F{COMPLETEDBY_TITLE}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="616" y="17" width="122" height="14" uuid="0ee2d8d6-ed41-4cf8-aee1-42dc3ab511b2">
+					<printWhenExpression><![CDATA[($F{REVIEWEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_REVIEWED_DATE}==null) ? null :"Date Reviewed: "+$P{DateTimeScriptlet_SCRIPTLET}.getLocalTime(
+$F{COA_REVIEWED_DATE}, "dd-MMM-yyyy", $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="458" y="37" width="160" height="1" forecolor="#000000" uuid="02c9e853-3b3d-4634-9f00-1cf30f5c2bd6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="446" y="38" width="214" height="14" uuid="400f8f51-b191-49ec-acea-2b65a0af72b2">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{REVIEWEDBY_NAME}+(($F{REVIEWEDBY_TITLE}!=null)?", "+$F{REVIEWEDBY_TITLE}:"")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="209" y="53" width="242" height="15" uuid="8e575d83-0121-426e-8e41-6edbe802d1d5">
+					<printWhenExpression><![CDATA[($F{COMPLETEDBY_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom" markup="none">
+					<font fontName="Times NR LMS" size="6.5" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[This document is signed electronically by LIMS. Original signature is on file.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="652" y="52" width="110" height="14" uuid="2f0bddc9-4c7a-48e8-96d1-f0173e34e79c"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Times NR LMS" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Report build: 1.0.8"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="56" width="177" height="12" uuid="4d0db32b-fe46-499a-bd40-39552582743e"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="LMS Times NR" size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Printed " + TODAY( )]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+</jasperReport>
