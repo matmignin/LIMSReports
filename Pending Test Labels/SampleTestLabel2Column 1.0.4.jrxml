@@ -215,8 +215,8 @@ WHERE
 ps.BATCHNUMBER = (select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE $X{IN,ps1.sampleguid,SAMPLEGUID})
 
 AND (t.status = 100 OR t.status = 500)
-    AND (
-      (tr.flagvalid <> 'N' AND t.testid <> 'Minerals')
+    AND ((tr.flagvalid <> 'N' AND t.testid <> 'Minerals'))
+    AND st.Deletion <> 'Y'
       OR(t.testid = 'Minerals' AND
           (','||SUbstr(tr.REASONFORCHANGE, 54)||','  LIKE '%,'||tr.GENERICNUM05||',%'AND tr.RESULTVALUATION = 'SKIP LOT' AND tr.flagvalid <> 'N')
           OR (tr.COMMENTS like '%est%' AND tr.flagvalid <>  'N')
