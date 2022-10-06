@@ -60,7 +60,7 @@
 			</style>
 		</conditionalStyle>
 	</style>
-	<parameter name="SAMPLEGUID" class="java.util.List">
+	<parameter name="SAMPLEGUID" class="java.util.List" isForPrompting="false">
 		<parameterDescription><![CDATA[]]></parameterDescription>
 	</parameter>
 	<queryString language="SQL">
@@ -109,7 +109,7 @@ ListAGG(DECODE(t.testid,
         'Lead', 'Pb:',
         'Mercury', 'Hg:',
         'Cadmium', 'Cd:',
-        'Arsenic', 'Ar:',
+        'Arsenic', 'As:',
         tr.resultid
        )
       
@@ -212,11 +212,12 @@ FROM
 
 WHERE
 
-ps.BATCHNUMBER = (select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE $X{IN,ps1.sampleguid,SAMPLEGUID})
+ps.BATCHNUMBER = '209-0982' --(select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE $X{IN,ps1.sampleguid,SAMPLEGUID})
 
 AND (t.status = 100 OR t.status = 500)
-    AND ((tr.flagvalid <> 'N' AND t.testid <> 'Minerals'))
-    AND st.Deletion <> 'Y'
+AND st.Deletion <> 'Y'
+    AND (
+      (tr.flagvalid <> 'N' AND t.testid <> 'Minerals')
       OR(t.testid = 'Minerals' AND
           (','||SUbstr(tr.REASONFORCHANGE, 54)||','  LIKE '%,'||tr.GENERICNUM05||',%'AND tr.RESULTVALUATION = 'SKIP LOT' AND tr.flagvalid <> 'N')
           OR (tr.COMMENTS like '%est%' AND tr.flagvalid <>  'N')
@@ -249,9 +250,9 @@ ASC]]>
 		<initialValueExpression><![CDATA[]]></initialValueExpression>
 	</variable>
 	<columnHeader>
-		<band height="11">
+		<band height="13">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="62" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3009bd98-6c91-4712-be7f-5446cf081d2a">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="0" y="2" width="62" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3009bd98-6c91-4712-be7f-5446cf081d2a">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -268,7 +269,7 @@ ASC]]>
 				<textFieldExpression><![CDATA[$F{FORMULATION}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="62" y="0" width="58" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="62" y="2" width="58" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
 				<box leftPadding="1" bottomPadding="2" rightPadding="1">
@@ -325,7 +326,7 @@ ASC]]>
 				</box>
 				<textElement verticalAlignment="Top">
 					<font fontName="LMS Arial" size="9" isBold="false" isUnderline="false"/>
-					<paragraph lineSpacing="Single" leftIndent="4" tabStopWidth="20">
+					<paragraph lineSpacing="Single" leftIndent="4" tabStopWidth="30">
 						<tabStop position="25" alignment="Right"/>
 					</paragraph>
 				</textElement>
