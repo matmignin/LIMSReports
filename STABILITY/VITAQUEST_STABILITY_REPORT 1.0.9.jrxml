@@ -314,13 +314,12 @@ AND
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
 	<parameter name="LOCAL_TIME_NAME" class="java.lang.String" isForPrompting="false"/>
 	<parameter name="PARAM_BN" class="java.util.List" isForPrompting="false"/>
-	<parameter name="REQUESTGUID" class="java.util.List" isForPrompting="false">
+	<parameter name="REQUESTGUID" class="java.util.List">
 		<parameterDescription><![CDATA[REQUESTGUID]]></parameterDescription>
 	</parameter>
 	<queryString language="SQL">
 		<![CDATA[SELECT DISTINCT
     trq.requestguid,
-
     Decode(coa_results.formulationid,trq.formulationid,coa_results.Formulationid,trq.formulationid) AS formulationid,
     p.tradename                                                                                     AS tradename,  
     ps.batchnumber                                                                                  As batchnumber,
@@ -342,7 +341,13 @@ AND
             trq.storagecondition
         ELSE
             CASE
+                WHEN trq.subStorageCondition Like 'RT' OR trq.subStorageCondition Like '25%' THEN
+                    '25°C ± 2°C/60% RH ± 5% RH'                
+                WHEN trq.subStorageCondition Like 'ACC' OR trq.subStorageCondition Like '40%' THEN
+                    '40°C ± 2°C/75% RH ± 5% RH'                    
                 WHEN ps.studyname LIKE '%RT/ACC%' THEN
+                    'Room Temperature and Accelerated'
+                WHEN ps.studyname LIKE '%RT&ACC%' THEN
                     'Room Temperature and Accelerated'
                 WHEN ps.studyname LIKE '%ACC%' THEN
                     '40°C ± 2°C/75% RH ± 5% RH'
@@ -519,6 +524,7 @@ WHERE
 --'cc7d1945-7ec2-452a-8f25-43c78ab43b56' --I860
 --'4cd443ec-13d7-446f-b8e2-adf21449c0a2'  --K277
 --'1f5c0188-200e-45dc-b445-badb9079892c' --K158 probiotic
+--'2d3c8e71-b785-40bb-9ce3-b70f2aea7d02' --roomtemp study name messed up "RT&ACC"
 $X{IN,trq.requestguid,REQUESTGUID}  
 order by coa_completed_date desc 
 fetch first 1 rows only]]>
@@ -1284,7 +1290,7 @@ $F{COA_REVIEWED_DATE}, "dd-MMM-yyyy", $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]>
 				<textElement textAlignment="Right" verticalAlignment="Bottom">
 					<font fontName="Times NR LMS" size="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Report build: 1.0.8"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Report build: 1.0.9"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="4" y="56" width="177" height="12" uuid="4d0db32b-fe46-499a-bd40-39552582743e"/>
