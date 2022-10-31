@@ -1,0 +1,1613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CertificateOfAnalysis" pageWidth="612" pageHeight="792" whenNoDataType="NoDataSection" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a503fc4b-3d0d-4afc-930b-adfe302a6e09">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="208"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="784"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="PRD"/>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#EEEEEE">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.0" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Transparent" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+			<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#EEEEEE">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#DDDDDD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<topPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<leftPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<bottomPen lineWidth="0.5" lineColor="#EEEEEE"/>
+			<rightPen lineWidth="0.5" lineColor="#EEEEEE"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EEEEEE"/>
+		</conditionalStyle>
+	</style>
+	<style name="MicPendingResult">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{RESULT}.equals("pending")]]></conditionExpression>
+			<style forecolor="#CC0033" isBold="true"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#DDDDDD">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<topPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<leftPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<bottomPen lineWidth="0.5" lineColor="#AAAAAA"/>
+			<rightPen lineWidth="0.5" lineColor="#AAAAAA"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EEEEEE"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Micro" uuid="c1c6aae9-9480-4f66-a759-c30295aaaeb1">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TEST ENV Data Adapter "/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<parameter name="MICBATCHNUMBER" class="java.lang.String"/>
+		<parameter name="LOCAL_TIME_NAME" class="java.lang.String"/>
+		<parameter name="DateTimeScriptlet_MIC" class="scriptlets.DateTimeScriptlet"/>
+		<parameter name="MICRO_FOOTNOTE" class="java.lang.String"/>
+		<parameter name="MICPKGLOT" class="java.lang.String"/>
+		<parameter name="MICBLISTERLOT" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT tr.resultid AS testing,
+ CASE 
+    WHEN tr.resulttype = 'LIST' THEN
+      DECODE(t.requirement, NULL, trr.listvalue, t.requirement)
+    ELSE
+      DECODE(tr.resulttype,NULL,NULL,tr.requirement) 
+  END AS specification_range,
+  CASE 
+  WHEN tr.resulttype = 'NUMERIC' AND tr.status = 70 THEN
+      DECODE(tr.numericalresult,0,'Absent'||DECODE(tr.unit,NULL,NULL,'/'||tr.unit),tr.prefix||TRIM(TO_CHAR(REGEXP_SUBSTR(REPLACE(tr.numericalresulttext,tr.prefix,''),'^\d+'),'999,999,999'))|| CASE WHEN INSTR(tr.numericalresulttext,'.') > 0 THEN SUBSTR(tr.numericalresulttext,INSTR(tr.numericalresulttext,'.')) END ||DECODE(tr.unit,NULL,NULL,' '||tr.unit))
+  WHEN tr.resulttype IN ('LIST','TEXT') AND tr.status = 70 THEN
+    tr.textresult||DECODE(tr.unit,NULL,NULL,' '||tr.unit)
+  WHEN tr.status = 10 THEN
+    'pending'
+  ELSE
+    'Not Tested'
+  END AS result, 
+  TO_CHAR(TO_DATE(SUBSTR(tr.resultdate,1,8),'YYYYMMDD'),'DD-Mon-YYYY') AS test_date,
+ sm.description AS method,
+  tr.generic01 AS notebook_ref,
+  (SELECT dv.description FROM domainvalue dv WHERE UPPER(dv.domainid) = 'REPORT PARAMETERS' AND UPPER(dv.value) = 'DATE FORMAT' AND dv.deletion = 'N') AS report_date_format
+FROM (
+  SELECT DISTINCT ps.sampleguid, ps.batchnumber, ps.generic01, ps.generic04, ps.formulationid
+  FROM physicalsample ps
+  JOIN testresult tr ON tr.sampleguid = ps.sampleguid AND tr.deletion = 'N'
+  JOIN test t ON t.testguid = tr.testguid AND UPPER(t.testgroup) = 'MICRO' AND t.deletion = 'N'
+  WHERE ps.batchnumber IS NOT NULL AND ps.deletion = 'N'
+) psi
+JOIN testresult tr ON tr.sampleguid = psi.sampleguid AND tr.deletion = 'N'
+JOIN test t ON t.testguid = tr.testguid AND UPPER(t.testgroup) = 'MICRO' AND t.deletion = 'N'
+LEFT JOIN testresultrequirement trr ON trr.resultguid = tr.resultguid AND trr.valuationcode = 1 
+LEFT JOIN smmethod sm ON sm.methodid = t.methodid AND sm.versionno = t.methodversionno AND sm.deletion = 'N'
+LEFT JOIN physicalsample ps ON ps.sampleguid = psi.sampleguid
+LEFT JOIN specificationtestresult str ON str.specificationid = ps.specificationid AND str.versionno = ps.specificationversionno AND str.testid = t.testid AND str.resultid = tr.resultid AND str.deletion = 'N'
+LEFT JOIN specificationtest st ON st.specificationid = str.specificationid AND st.versionno = str.versionno AND st.testguid = str.testguid 
+WHERE psi.batchnumber = $P{MICBATCHNUMBER}
+ AND (($P{MICPKGLOT} IS NOT NULL AND psi.generic01 = $P{MICPKGLOT}) OR $P{MICPKGLOT} IS NULL) AND (($P{MICBLISTERLOT} IS NOT NULL AND psi.generic04 = $P{MICBLISTERLOT}) OR $P{MICBLISTERLOT} IS NULL)
+ AND (st.deletion IS NULL OR (st.deletion IS NOT NULL AND st.deletion = 'N')
+ 	AND tr.flagisfinalresult = 'Y'      --1.3.3 (Micro Fix)
+ )
+ORDER BY 
+	DECODE(st.seqno,NULL,t.seqno,st.seqno), 
+	DECODE(str.seqno,NULL,tr.sequencenumber,str.seqno)]]>
+		</queryString>
+		<field name="TESTING" class="java.lang.String"/>
+		<field name="SPECIFICATION_RANGE" class="java.lang.String"/>
+		<field name="RESULT" class="java.lang.String"/>
+		<field name="TEST_DATE" class="java.lang.String"/>
+		<field name="METHOD" class="java.lang.String"/>
+		<field name="NOTEBOOK_REF" class="java.lang.String"/>
+		<field name="REPORT_DATE_FORMAT" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="ReportParameters" uuid="c2ad9b2a-271e-4d9a-81fe-30c6c6a3136c">
+		<parameter name="USERID" class="java.lang.String"/>
+		<parameter name="DateTimeScriptlet_FOOT" class="scriptlets.DateTimeScriptlet"/>
+		<parameter name="LOCAL_TIME_NAME" class="java.lang.String"/>
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+  DECODE(dv1.description,NULL,NULL,'Confidential to '||dv1.description) AS report_confidential,
+  dv2.description AS report_date_format, 
+  dv3.description AS report_date_time_format,
+  (SELECT 'LMS Version: '||s.longalphavalue FROM systemvalues s WHERE s.systemtypeid = 'DRG_SYSTEM' AND s.valuecode = 'DB_BUILDINFO') AS report_lms_version,
+  'Database: '||SYS_CONTEXT('USERENV', 'SERVER_HOST') AS report_server,
+  (SELECT e.employeename||DECODE(e.employeefirstname,NULL,NULL,', '||e.employeefirstname)||' ('||e.empid||')' FROM employee e WHERE $X{EQUAL,e.empid,USERID}) AS report_print_by
+FROM domainvalue dv1
+LEFT JOIN domainvalue dv2 ON dv2.domainid = dv1.domainid AND UPPER(dv2.value) = 'DATE FORMAT' AND dv2.deletion = 'N'
+LEFT JOIN domainvalue dv3 ON dv3.domainid = dv1.domainid AND UPPER(dv3.value) = 'DATE TIME FORMAT' AND dv3.deletion = 'N'
+WHERE UPPER(dv1.domainid) = 'REPORT PARAMETERS' 
+  AND UPPER(dv1.value) = 'COMPANY NAME' 
+    AND dv1.deletion = 'N']]>
+		</queryString>
+		<field name="REPORT_CONFIDENTIAL" class="java.lang.String"/>
+		<field name="REPORT_DATE_FORMAT" class="java.lang.String"/>
+		<field name="REPORT_DATE_TIME_FORMAT" class="java.lang.String"/>
+		<field name="REPORT_LMS_VERSION" class="java.lang.String"/>
+		<field name="REPORT_SERVER" class="java.lang.String"/>
+		<field name="REPORT_PRINT_BY" class="java.lang.String"/>
+	</subDataset>
+	<scriptlet name="DateTimeScriptlet" class="scriptlets.DateTimeScriptlet">
+		<scriptletDescription><![CDATA[]]></scriptletDescription>
+	</scriptlet>
+	<parameter name="REQUESTGUID" class="java.util.List">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="USERID" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="LOCAL_TIME_NAME" class="java.lang.String"/>
+	<parameter name="PARAM_BN" class="java.util.List"/>
+	<parameter name="REPORT_REV1_DATE" class="java.lang.String">
+		<parameterDescription><![CDATA[Report revison date (YYYYDDMM)]]></parameterDescription>
+		<defaultValueExpression><![CDATA["20220130"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    DISTINCT trq.requestguid,
+    p.productid,
+    f.formulationid,
+    p.tradename,
+    p.alternateid1 AS product_code,
+    DECODE(p.generic1, NULL, NULL, p.generic1 || ':') AS vendor_code_label,
+    p.alternateid2 AS vendor_code,
+    p.generic2 AS micro_footnote,
+    DECODE(f.generic5, NULL, NULL, f.generic5 || ':') AS vendor_product_label,
+    f.alternateid1 AS vendor_product_code,
+    f.generic1 AS serving_size,
+    f.generic2 AS shape_size,
+    f.generic3 AS description_color,
+    trq.batchnumber AS mfg_lot,
+    coa_primary.generic01 AS package_lot,
+    coa_primary.generic04 AS blister_lot,
+    coa_primary.generic02 AS ship_to,
+    coa_primary.generic06 AS coated_lot,
+    dv.description AS ship_to_parms,
+    coa_results.customer_lot,
+    -- Open request count
+        (SELECT
+        COUNT(1)
+        FROM
+            testrequest trqc
+            JOIN requestsample rqc
+            ON rqc.requestguid = trqc.requestguid AND
+            rqc.deletion = 'N'
+            JOIN physicalsample psc
+            ON psc.sampleguid = rqc.sampleguid
+        WHERE
+            trqc.product = trq.product AND
+            trqc.formulationid = trq.formulationid AND
+            psc.batchnumber = ps.batchnumber AND ( (
+                    ps.generic01 IS NOT NULL AND
+                    psc.generic01 = ps.generic01
+                ) OR
+                ps.generic01 IS NULL
+            ) AND ( (
+                    ps.generic04 IS NOT NULL AND
+                    psc.generic04 = ps.generic04
+                ) OR
+                ps.generic04 IS NULL
+            ) AND
+            trqc.status IN (1000, 500, 100)
+    ) open_requests,
+    coa_results.testguid AS coa_testguid,
+    coa_sign.max_circulationid AS coa_version,
+    coa_results.manufacture_date,
+    coa_results.expiration_date,
+    coa_results.po_number,          -- (1.3.1)
+    coa_results.number_of_boxes,    -- (1.3.2)
+    coa_results.quantity_per_box,   -- (1.3.2)
+    coa_results.total_quantity,     -- (1.3.2)
+    coa_results.other_boxes,        -- (1.3.2)
+    coa_results.other_quantity,     -- (1.3.2)
+    coa_results.other_total_quantity,     -- (1.3.2)
+    coa_results.carton_lot,
+    coa_results.approvedby AS coa_userid,
+    e.employeefirstname || ' ' || e.employeename AS coa_name,
+    e.employeetitle AS coa_title,
+    coa_results.approvaldate AS coa_date,
+    -- Report revision
+    CASE
+        WHEN coa_results.approvaldate > $P{REPORT_REV1_DATE}
+        THEN 'Y'
+        ELSE 'N'
+    END AS IS_REPORT_REV1,
+    -- Report date format
+        (SELECT
+            dv.description
+        FROM
+            domainvalue dv
+        WHERE
+            UPPER(dv.domainid) = 'REPORT PARAMETERS' AND
+            UPPER(dv.value) = 'DATE FORMAT' AND
+            dv.deletion = 'N'
+    ) report_date_format
+FROM
+    testrequest trq --
+    JOIN (
+        SELECT
+            DISTINCT t.requestguid,
+            ts.sampleguid
+        FROM
+            testsample ts
+            JOIN test t
+            ON t.testguid = ts.testguid AND
+            t.deletion = 'N'
+        WHERE
+            ts.deletion = 'N'
+        UNION
+        SELECT
+            rs.requestguid,
+            rs.sampleguid
+        FROM
+            requestsample rs
+        WHERE
+            rs.deletion = 'N'
+    ) rs
+    ON rs.requestguid = trq.requestguid --
+    JOIN physicalsample ps
+    ON ps.sampleguid = rs.sampleguid
+    LEFT JOIN product p
+    ON p.productid = trq.product AND
+    p.deletion = 'N'
+    LEFT JOIN formulation f
+    ON f.productid = trq.product AND
+    f.formulationid = trq.formulationid AND
+    f.deletion = 'N'
+    LEFT JOIN (
+        SELECT
+            trq1.requestguid,
+            ps1.batchnumber,
+            ps1.generic01,
+            ps1.generic02,
+            ps1.generic04,
+            ps1.generic06,
+            trq2.requestguid AS primary_requestguid,
+            t.testgroup
+        FROM
+            testrequest trq1
+            JOIN testrequest trq2
+            ON trq2.batchnumber = trq1.batchnumber AND
+            trq2.product = trq1.product AND
+            trq2.formulationid = trq1.formulationid
+            JOIN requestsample rs1
+            ON rs1.requestguid = trq2.requestguid AND
+            rs1.deletion = 'N'
+            JOIN physicalsample ps1
+            ON ps1.sampleguid = rs1.sampleguid
+            JOIN test t
+            ON t.requestguid = trq2.requestguid AND
+            t.testgroup = 'COA' AND
+            t.deletion = 'N'
+        WHERE
+            trq1.batchnumber IS NOT NULL AND
+            trq1.product IS NOT NULL AND
+            trq1.formulationid IS NOT NULL
+    ) coa_primary
+    ON coa_primary.requestguid = trq.requestguid AND
+    coa_primary.batchnumber = ps.batchnumber AND ( (
+            ps.generic01 IS NOT NULL AND
+            coa_primary.generic01 = ps.generic01
+        ) OR
+        ps.generic01 IS NULL
+    ) AND ( (
+            ps.generic04 IS NOT NULL AND
+            coa_primary.generic04 = ps.generic04
+        ) OR
+        ps.generic04 IS NULL
+    ) --
+    LEFT JOIN (
+        SELECT
+            trs.requestguid,
+            MAX(trs.circulationid) AS max_circulationid
+        FROM
+            testrequestsign trs
+            JOIN test t
+            ON t.requestguid = trs.requestguid AND
+            t.testgroup = 'COA' AND
+            t.deletion = 'N'
+        GROUP BY
+            trs.requestguid
+    ) coa_sign
+    ON coa_sign.requestguid = coa_primary.primary_requestguid --
+    LEFT JOIN (
+        SELECT
+            t.testguid,
+            ps.batchnumber,
+            ps.generic01,
+            ps.generic04,
+            trq.product,
+            trq.formulationid,
+            TO_CHAR(
+                TO_DATE(SUBSTR(tr1.textresult, 1, 8), 'YYYYMMDD'),
+                'DD-MON-YYYY'
+            ) AS manufacture_date,
+            TO_CHAR(
+                TO_DATE(SUBSTR(tr2.textresult, 1, 8), 'YYYYMMDD'),
+                DECODE(tr5.textresult, NULL, 'DD-MON-YYYY', tr5.textresult)
+            ) AS expiration_date,
+            tr3.textresult AS carton_lot,
+            tr6.textresult AS customer_lot,
+            tr7.textresult AS po_number,                              -- (1.3.1)
+            TO_NUMBER(tr8.textresult) AS number_of_boxes,                        -- (1.3.2)
+            TO_NUMBER(tr9.textresult) AS quantity_per_box,                       -- (1.3.2)
+          	tr8.textresult * tr9.textresult AS total_quantity,        -- (1.3.2)
+            TO_NUMBER(tr10.textresult) AS other_boxes,                           -- (1.3.2)
+            TO_NUMBER(tr11.textresult) AS other_quantity,                        -- (1.3.2)
+          	tr10.textresult * tr11.textresult AS other_total_quantity,  -- (1.3.2)
+            trq.approvedby,
+            trq.approvaldate
+        FROM
+            testrequest trq
+            JOIN requestsample rs
+            ON rs.requestguid = trq.requestguid AND
+									$X{IN, rs.requestguid, REQUESTGUID} AND
+            rs.deletion = 'N'
+            JOIN physicalsample ps
+            ON ps.sampleguid = rs.sampleguid
+            JOIN test t
+            ON t.requestguid = trq.requestguid AND
+            t.testgroup = 'COA' AND
+            t.deletion = 'N'
+            JOIN testresult tr1
+            ON tr1.testguid = t.testguid AND
+            tr1.resultid = 'Manufacture Date' AND tr1.resultvaluation = 'OK' AND
+            tr1.deletion = 'N'
+            JOIN testresult tr2
+            ON tr2.testguid = t.testguid AND
+            tr2.resultid = 'Expiration Date' AND tr2.resultvaluation = 'OK' AND
+            tr2.deletion = 'N'
+            LEFT JOIN testresult tr3
+            ON tr3.testguid = t.testguid AND
+            tr3.resultid = 'Carton Lot' AND
+            tr3.deletion = 'N'
+            LEFT JOIN testresult tr5
+            ON tr5.testguid = t.testguid AND
+            tr5.resultid = 'Expiration Date Format' AND  tr5.resultvaluation = 'OK' AND
+            tr5.deletion = 'N'
+            LEFT JOIN testresult tr6
+            ON tr6.testguid = t.testguid AND
+            tr6.resultid = 'Customer Lot' AND
+            tr6.resultvaluation = 'OK' AND
+            tr6.deletion = 'N'
+            LEFT JOIN testresult tr7  -- (1.3.1)
+                ON tr7.testguid = t.testguid AND tr7.resultid = 'PO Number' AND tr7.deletion = 'N'
+            LEFT JOIN testresult tr8  -- (1.3.2)
+                ON tr8.testguid = t.testguid AND tr8.resultid = 'Number of Boxes' AND tr8.deletion = 'N'
+            LEFT JOIN testresult tr9  -- (1.3.2)
+                ON tr9.testguid = t.testguid AND tr9.resultid = 'Quantity per Box' AND tr9.deletion = 'N'
+            LEFT JOIN testresult tr10  -- (1.3.2)
+                ON tr10.testguid = t.testguid AND tr10.resultid = 'Other Boxes' AND tr10.deletion = 'N'
+            LEFT JOIN testresult tr11  -- (1.3.2)
+                ON tr11.testguid = t.testguid AND tr11.resultid = 'Other Quantity' AND tr11.deletion = 'N'
+        WHERE
+            trq.batchnumber IS NOT NULL AND
+            trq.product IS NOT NULL AND
+            trq.formulationid IS NOT NULL
+    ) coa_results
+    ON coa_results.product = trq.product AND
+    coa_results.formulationid = trq.formulationid AND
+    coa_results.batchnumber = ps.batchnumber AND ( (
+            ps.generic01 IS NOT NULL AND
+            coa_results.generic01 = ps.generic01
+        ) OR
+        ps.generic01 IS NULL
+    ) AND ( (
+            ps.generic04 IS NOT NULL AND
+            coa_results.generic04 = ps.generic04
+        ) OR
+        ps.generic04 IS NULL
+    ) --
+    LEFT JOIN employee e
+    ON e.empid = coa_results.approvedby
+    LEFT JOIN domainvalue dv
+    ON dv.domainid = 'SM VQ Ship To' AND
+    UPPER(dv.value) = UPPER(ps.generic02) AND
+    dv.deletion = 'N'
+WHERE
+$X{IN,trq.requestguid,REQUESTGUID}]]>
+	</queryString>
+	<field name="REQUESTGUID" class="java.lang.String"/>
+	<field name="PRODUCTID" class="java.lang.String"/>
+	<field name="FORMULATIONID" class="java.lang.String"/>
+	<field name="TRADENAME" class="java.lang.String"/>
+	<field name="PRODUCT_CODE" class="java.lang.String"/>
+	<field name="VENDOR_CODE_LABEL" class="java.lang.String"/>
+	<field name="VENDOR_CODE" class="java.lang.String"/>
+	<field name="MICRO_FOOTNOTE" class="java.lang.String"/>
+	<field name="VENDOR_PRODUCT_LABEL" class="java.lang.String"/>
+	<field name="VENDOR_PRODUCT_CODE" class="java.lang.String"/>
+	<field name="SERVING_SIZE" class="java.lang.String"/>
+	<field name="SHAPE_SIZE" class="java.lang.String"/>
+	<field name="DESCRIPTION_COLOR" class="java.lang.String"/>
+	<field name="MFG_LOT" class="java.lang.String"/>
+	<field name="PACKAGE_LOT" class="java.lang.String"/>
+	<field name="BLISTER_LOT" class="java.lang.String"/>
+	<field name="SHIP_TO" class="java.lang.String"/>
+	<field name="COATED_LOT" class="java.lang.String"/>
+	<field name="SHIP_TO_PARMS" class="java.lang.String"/>
+	<field name="CUSTOMER_LOT" class="java.lang.String"/>
+	<field name="OPEN_REQUESTS" class="java.math.BigDecimal"/>
+	<field name="COA_TESTGUID" class="java.lang.String"/>
+	<field name="COA_VERSION" class="java.math.BigDecimal"/>
+	<field name="MANUFACTURE_DATE" class="java.lang.String"/>
+	<field name="EXPIRATION_DATE" class="java.lang.String"/>
+	<field name="PO_NUMBER" class="java.lang.String"/>
+	<field name="NUMBER_OF_BOXES" class="java.math.BigDecimal"/>
+	<field name="QUANTITY_PER_BOX" class="java.math.BigDecimal"/>
+	<field name="TOTAL_QUANTITY" class="java.math.BigDecimal"/>
+	<field name="OTHER_BOXES" class="java.math.BigDecimal"/>
+	<field name="OTHER_QUANTITY" class="java.math.BigDecimal"/>
+	<field name="OTHER_TOTAL_QUANTITY" class="java.math.BigDecimal"/>
+	<field name="CARTON_LOT" class="java.lang.String"/>
+	<field name="COA_USERID" class="java.lang.String"/>
+	<field name="COA_NAME" class="java.lang.String"/>
+	<field name="COA_TITLE" class="java.lang.String"/>
+	<field name="COA_DATE" class="java.lang.String"/>
+	<field name="IS_REPORT_REV1" class="java.lang.String"/>
+	<field name="REPORT_DATE_FORMAT" class="java.lang.String"/>
+	<variable name="REPORT_VERSION" class="java.lang.String">
+		<variableExpression><![CDATA["1.3.8"]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<variable name="CURRENT_PAGE_NUMBER" class="java.lang.Integer" resetType="Group" resetGroup="ProductGroup" incrementType="Page">
+		<variableExpression><![CDATA[$V{PAGE_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="IS_BOVMTDPC" class="java.lang.String">
+		<initialValueExpression><![CDATA["N"]]></initialValueExpression>
+	</variable>
+	<group name="ProductGroup" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{REQUESTGUID}]]></groupExpression>
+		<groupHeader>
+			<band height="122">
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="36" width="194" height="16" uuid="ec69c7ba-8695-4cc1-8a20-c9833372fd74"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MFG_LOT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="100" width="182" height="16" uuid="6c5129f3-4cbe-4ad8-8cd4-697cc0f0834c"/>
+					<box>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{EXPIRATION_DATE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Transparent" x="302" y="36" width="88" height="16" forecolor="#000000" backcolor="#FFFFFF" uuid="4dcd13af-301e-453b-b234-cfdbb7d7d052"/>
+					<box padding="0" topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" markup="none">
+						<font fontName="Times NR LMS" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+						<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PACKAGE_LOT}==null?"":"Pkg Lot #:"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="36" width="100" height="16" uuid="0c06cb83-f994-4aca-81af-c3a9cbf72362"/>
+					<box leftPadding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Mfg Lot #: ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="100" width="194" height="16" uuid="bdda4231-1cf7-4927-bbcd-9ddc0d409e12"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MANUFACTURE_DATE}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="68" width="194" height="16" isRemoveLineWhenBlank="true" uuid="c3979a9d-e89c-4952-8724-fc2d34709ed9"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CARTON_LOT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="52" width="100" height="16" isRemoveLineWhenBlank="true" uuid="75f30265-d434-45d6-b3a6-552f396abb90">
+						<printWhenExpression><![CDATA[$F{VENDOR_PRODUCT_LABEL}!=null]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="0">
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{VENDOR_PRODUCT_LABEL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="52" width="194" height="16" uuid="9c2f762a-8c69-4291-97e3-c7e532543010">
+						<printWhenExpression><![CDATA[$F{VENDOR_PRODUCT_LABEL}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{VENDOR_PRODUCT_CODE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="100" width="100" height="16" uuid="8e39b4d7-1d3b-4228-b852-c60dcf53daff"/>
+					<box leftPadding="0"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Manufacture Date:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="36" width="182" height="16" uuid="550c8964-551b-486b-bd29-dc35c079e544"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PACKAGE_LOT}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="302" y="100" width="88" height="16" uuid="6cf1c862-29d1-4fd1-9db0-690feb1b1835"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Expiration Date: ]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="68" width="100" height="16" isRemoveLineWhenBlank="true" uuid="a5a46721-de14-4f7b-9aba-f295f80f1092">
+						<printWhenExpression><![CDATA[$F{CARTON_LOT}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CARTON_LOT}!=null?"Carton Lot #:":"")]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="4" width="100" height="16" uuid="3cf8eab8-9be8-4bf5-80e0-8969c3a99eb1"/>
+					<box leftPadding="0"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Product Code:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="20" width="100" height="16" uuid="90bc1d64-808c-47e0-82ab-0703937083ee"/>
+					<box leftPadding="0"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Product:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="20" width="472" height="16" uuid="f3857ff6-e7d0-4a90-9442-085a7064de11"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{TRADENAME}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="4" width="194" height="16" uuid="27cff2ab-af59-4103-bfcf-cb4ec33755f8"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PRODUCT_CODE}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="4" width="182" height="16" uuid="72f83299-0ed3-4cb2-9dc4-8458cef3f8de"/>
+					<box>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{SHIP_TO}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="302" y="4" width="88" height="16" uuid="e0470f8a-6456-4d2d-9fc6-0d14cd37d7f3"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Times NR LMS"/>
+					</textElement>
+					<text><![CDATA[Ship To: ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="121" width="572" height="1" forecolor="#AAAAAA" uuid="42030e33-c486-4840-af6b-4608072b2623"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="84" width="100" height="16" isRemoveLineWhenBlank="true" uuid="d05346f9-bbe4-4ee6-a76e-ee1ae6bad5e7">
+						<printWhenExpression><![CDATA[$F{COATED_LOT}!=null]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="0">
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Coated Tablet Lot #:]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="100" y="84" width="194" height="16" isRemoveLineWhenBlank="true" uuid="5528bb6e-e9eb-4cfb-8047-7b5a8fe4c7c2"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{COATED_LOT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="52" width="182" height="16" isRemoveLineWhenBlank="true" uuid="94c46830-5d34-404e-907b-59e52bba8a65">
+						<printWhenExpression><![CDATA[$F{PO_NUMBER}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PO_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="302" y="52" width="88" height="16" isRemoveLineWhenBlank="true" uuid="3422cb43-e659-4d83-a51b-d6ee14b4ad51">
+						<printWhenExpression><![CDATA[$F{PO_NUMBER}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PO_NUMBER}!=null ?"PO #:":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="302" y="84" width="88" height="16" isRemoveLineWhenBlank="true" uuid="6f9759e8-96b3-47d6-8946-3420f41c0053">
+						<printWhenExpression><![CDATA[$F{BLISTER_LOT}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CARTON_LOT}==null && $F{BLISTER_LOT}!=null) ?"Blister Lot #:":""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="84" width="182" height="16" isRemoveLineWhenBlank="true" uuid="d49b1412-4263-42fa-b02d-12523e253920"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CARTON_LOT}==null && $F{BLISTER_LOT}!=null) ?$F{BLISTER_LOT}:""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="390" y="68" width="182" height="16" isRemoveLineWhenBlank="true" uuid="00e71068-70fc-4090-abd0-81bd86ca5e42"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CARTON_LOT}!=null && $F{BLISTER_LOT}!=null) ?$F{BLISTER_LOT}:""]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="302" y="68" width="88" height="16" isRemoveLineWhenBlank="true" uuid="f7c06a05-8035-43dc-b57d-80d37002b396">
+						<printWhenExpression><![CDATA[$F{BLISTER_LOT}!=null]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Times NR LMS" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($F{CARTON_LOT}!=null && $F{BLISTER_LOT}!=null) ?"Blister Lot #:":""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="1" width="571" height="70" forecolor="#CCCCCC" uuid="13d2b5d8-8d10-4241-8a49-1e8182691bf9">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}==null||$F{COA_TESTGUID}==null||$F{OPEN_REQUESTS}.intValue()>0||$F{COA_USERID}==null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times NR LMS" size="58"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.5"/>
+				</textElement>
+				<text><![CDATA[DRAFT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="30" forecolor="#000000" uuid="271a8191-bf9b-4ab9-ae35-3342bfae6f73"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times NR LMS" size="20" isBold="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF ANALYSIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="572" height="29" forecolor="#000000" uuid="4d30df4d-fd18-495c-9189-b325e385f8c5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times NR LMS" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[8 Henderson Drive, West Caldwell, New Jersey  07006
+phone (973) 575-9200  fax (973) 276-7185]]></text>
+			</staticText>
+			<image scaleImage="RealSize" hAlign="Center" isLazy="true" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="0" y="0" width="148" height="58" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="4f1fa229-6780-4dee-89f0-f66cc8e6f287">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["VQRequestCOA\\Vitaquest.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="83">
+			<printWhenExpression><![CDATA[($F{NUMBER_OF_BOXES}!=null && $F{QUANTITY_PER_BOX}!=null)]]></printWhenExpression>
+			<staticText>
+				<reportElement x="-5" y="4" width="572" height="16" uuid="d5381b55-de2c-4749-9352-9b42eebdeef7"/>
+				<box leftPadding="5"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times NR LMS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bulk Breakdown:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="190" y="32" width="87" height="16" uuid="18a50f12-1d10-4d24-9f8c-855a47927c30">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL_QUANTITY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="95" y="20" width="95" height="12" uuid="dad882a7-9d92-4630-8ed2-651588652ee4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantity per Box]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="20" width="87" height="12" uuid="6d3e54d6-36c5-43f5-9678-3c699dd3c254">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" stretchType="RelativeToTallestObject" x="95" y="32" width="95" height="16" uuid="075a9834-6d6b-45e9-bd01-aefe0e5093bf"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="Times NR LMS" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QUANTITY_PER_BOX}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="20" width="80" height="12" uuid="ffb9fdcf-6d17-4db7-bef1-81e35b58fe2f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number of Boxes]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="15" y="32" width="80" height="16" uuid="4d36eec0-934f-4df8-99ac-f50c068a918f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUMBER_OF_BOXES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="190" y="48" width="87" height="16" isRemoveLineWhenBlank="true" uuid="72b33f38-82d7-4eb4-b1f2-6055126cb596">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{OTHER_BOXES}!=null && $F{OTHER_QUANTITY}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OTHER_TOTAL_QUANTITY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" stretchType="RelativeToTallestObject" x="95" y="48" width="95" height="16" isRemoveLineWhenBlank="true" uuid="0c6cbc10-edc0-4990-a806-745216e55b63">
+					<printWhenExpression><![CDATA[($F{OTHER_BOXES}!=null && $F{OTHER_QUANTITY}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled">
+					<font fontName="Times NR LMS" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OTHER_QUANTITY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="15" y="48" width="80" height="16" isRemoveLineWhenBlank="true" uuid="1196470b-ae70-488b-b521-fd37c71f5d53">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{OTHER_BOXES}!=null && $F{OTHER_QUANTITY}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OTHER_BOXES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,###" isBlankWhenNull="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="190" y="64" width="87" height="16" isRemoveLineWhenBlank="true" uuid="90aed1ca-04ed-4c6f-96ca-974efd5b02b4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{OTHER_BOXES}!=null && $F{OTHER_QUANTITY}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SUM($F{TOTAL_QUANTITY},$F{OTHER_TOTAL_QUANTITY})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="66" width="106" height="12" isRemoveLineWhenBlank="true" uuid="2ce92c90-897e-4aca-9530-6f6682e73c24">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{OTHER_BOXES}!=null && $F{OTHER_QUANTITY}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Quantity]]></text>
+			</staticText>
+		</band>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="20" width="102" height="16" uuid="f1f3d714-6c14-4ef9-a433-ffff2bbf81e7">
+					<printWhenExpression><![CDATA[$F{DESCRIPTION_COLOR}!=null]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="9"/>
+				</textElement>
+				<text><![CDATA[Description/Color:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="117" y="20" width="455" height="16" isRemoveLineWhenBlank="true" uuid="0fe336fa-15af-4c95-a871-c10cac1d494d">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DESCRIPTION_COLOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="36" width="102" height="16" uuid="f9e55ea5-8e8d-4e53-917a-0f2c4fc8f9f4">
+					<printWhenExpression><![CDATA[$F{SHAPE_SIZE}!=null]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2">
+					<topPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="9"/>
+				</textElement>
+				<text><![CDATA[Shape/Size:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="117" y="36" width="455" height="16" isRemoveLineWhenBlank="true" uuid="f8cfaf7f-3ebb-469b-bda6-1b79f384af9b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SHAPE_SIZE}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="15" y="58" width="557" height="23" isRemoveLineWhenBlank="true" uuid="81f9acfa-36d5-4784-a666-217b1a698be5"/>
+				<subreportParameter name="PHYSBATCHNUMBER">
+					<subreportParameterExpression><![CDATA[$F{MFG_LOT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR}) + "Vitaquest Request COA Physical Subreport 1.3.6.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="-4" y="3" width="572" height="16" uuid="59342fc3-0b35-496a-b47d-7b7d058bfa1a"/>
+				<box leftPadding="5"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times NR LMS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Physical Specifications:]]></text>
+			</staticText>
+		</band>
+		<band height="48" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="-4" y="0" width="576" height="16" isRemoveLineWhenBlank="true" uuid="f1ed393a-fb39-4ee0-a60b-3b7c20acb9bb"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times NR LMS" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERVING_SIZE}+":"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="-4" y="20" width="576" height="20" uuid="7bc15b64-6f41-437b-8bc5-fd3cc653c560"/>
+				<subreportParameter name="PRODUCTID">
+					<subreportParameterExpression><![CDATA[$F{PRODUCTID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FORMULATIONID">
+					<subreportParameterExpression><![CDATA[$F{FORMULATIONID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BATCHNUMBER">
+					<subreportParameterExpression><![CDATA[$F{MFG_LOT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="REPORT_DATE_FORMAT">
+					<subreportParameterExpression><![CDATA[$F{REPORT_DATE_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOCAL_TIME_NAME">
+					<subreportParameterExpression><![CDATA[$P{LOCAL_TIME_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COA_DATE">
+					<subreportParameterExpression><![CDATA[$F{COA_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DateTimeScriptlet_ING">
+					<subreportParameterExpression><![CDATA[$P{DateTimeScriptlet_SCRIPTLET}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="IS_REPORT_REV1">
+					<subreportParameterExpression><![CDATA[$F{IS_REPORT_REV1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<returnValue subreportVariable="IS_BOVMTDPC" toVariable="IS_BOVMTDPC"/>
+				<subreportExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR}) + "Vitaquest Request COA Ingredient Subreport 1.3.8.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="42" splitType="Prevent">
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="0" width="572" height="32" uuid="320d427b-80aa-4c8e-9a53-1c17b3d74e84"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Micro" uuid="5828c3f5-c70d-482b-a8a0-432f8ccea371">
+						<datasetParameter name="MICBATCHNUMBER">
+							<datasetParameterExpression><![CDATA[$F{MFG_LOT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="LOCAL_TIME_NAME">
+							<datasetParameterExpression><![CDATA[$P{LOCAL_TIME_NAME}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="DateTimeScriptlet_MIC">
+							<datasetParameterExpression><![CDATA[$P{DateTimeScriptlet_SCRIPTLET}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="MICRO_FOOTNOTE">
+							<datasetParameterExpression><![CDATA[$F{MICRO_FOOTNOTE}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="MICPKGLOT">
+							<datasetParameterExpression><![CDATA[$F{PACKAGE_LOT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="MICBLISTERLOT">
+							<datasetParameterExpression><![CDATA[$F{BLISTER_LOT}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="013347b9-dc07-4ee2-8c98-5e950a4faa71">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<textField>
+								<reportElement mode="Transparent" x="0" y="0" width="120" height="16" forecolor="#000000" backcolor="#FFFFFF" uuid="44718c78-4ea2-4125-9427-3716d9ed991d"/>
+								<box padding="0" topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+									<font fontName="Times NR LMS" size="7" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+									<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{MICRO_FOOTNOTE}==null?"Microbial Testing": "** Microbial Testing"]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="120" height="16" uuid="e23e1843-d0bf-4df0-b3ea-438c603cf9df"/>
+								<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{TESTING}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="104" uuid="b0ea6d5c-4358-4d69-9de1-95b6703f4f9f">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="16" uuid="30489631-d053-4b74-8d51-cb9fa0f21843"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Specification Range]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="104" height="16" uuid="fe161e58-0684-456a-ae8a-467e5184023d"/>
+								<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{SPECIFICATION_RANGE}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="8ec603d4-ee86-4ef8-adc6-365757b2eb92">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="16" uuid="97388dfb-d499-4bb5-a699-ff4908bd8fd4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Result]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement style="MicPendingResult" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="95" height="16" uuid="450355bb-2b86-4963-951b-05623aaed427"/>
+								<box topPadding="2" leftPadding="5" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{RESULT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="3d878184-3f1b-46b8-af70-e138b3db3bb6">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="16" uuid="7a079c71-d103-4403-91c5-74476c78d58c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Test Date]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="75" height="16" uuid="c843f729-0b35-4820-9ac6-ea3303fb8e0b"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{TEST_DATE} == null) ? null :$P{DateTimeScriptlet_MIC}.getLocalTime(
+$F{TEST_DATE}, $F{REPORT_DATE_FORMAT}, $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="5bc741cb-dee8-41ea-b54f-1b84469436e9">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<staticText>
+								<reportElement x="0" y="0" width="95" height="16" uuid="f39536e3-9e0f-4509-bdf6-d3ddcd20de87"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Method]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="95" height="16" uuid="e5bfae82-de95-4638-9199-aa8f7de9c79e"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{METHOD}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="82" uuid="13e2d0b3-d46a-44b3-a6bf-b5075a4d528a">
+						<jr:columnHeader style="Table 1_TH" height="16">
+							<staticText>
+								<reportElement x="0" y="0" width="82" height="16" uuid="d3693acc-e281-4de9-aaff-0c89a0329b05"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Notebook Reference]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="16">
+							<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="82" height="16" uuid="f64097e3-930f-453f-8ac3-528b2bbb84bd"/>
+								<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times NR LMS" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{NOTEBOOK_REF}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Transparent" x="0" y="33" width="572" height="9" isRemoveLineWhenBlank="true" uuid="7611b268-86ec-497f-86a9-60714021c2e7">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<printWhenExpression><![CDATA[$F{MICRO_FOOTNOTE}!=null]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["** " + $F{MICRO_FOOTNOTE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="117" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="45" width="572" height="1" forecolor="#AAAAAA" uuid="89256627-f640-4b43-929b-c8a767d87afa"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="81" width="572" height="36" isPrintWhenDetailOverflows="true" forecolor="#CCCCCC" uuid="cb88b48a-3fad-4b18-b689-71f7ea530d4c">
+					<printWhenExpression><![CDATA[$F{COA_VERSION}==null || $F{COA_TESTGUID}==null || $F{OPEN_REQUESTS}.intValue() > 0.0 ||  $F{COA_USERID}==null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times NR LMS" size="30"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.5"/>
+				</textElement>
+				<text><![CDATA[DRAFT   DRAFT   DRAFT   DRAFT   DRAFT   DRAFT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="48" width="100" height="14" uuid="510d0d53-90d5-4ebb-ad93-8846a0e04f78"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_VERSION}==null||$F{COA_TESTGUID}==null||$F{OPEN_REQUESTS}.intValue()>(0))?"Version: DRAFT":"Version: "+$F{COA_VERSION}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="560" y="48" width="12" height="14" uuid="9a0ee1c1-77f6-498c-acf4-733d4c53da62">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Page">
+				<reportElement x="494" y="48" width="66" height="14" uuid="9d1054ef-c72e-47e6-9033-7d30b09dedc9"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: "+$V{PAGE_NUMBER}+" of "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="63" width="132" height="18" uuid="db9bd1da-bbc2-49e0-8d3d-464ead037ec5">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUALITY CONTROL APPROVAL:]]></text>
+			</staticText>
+			<image scaleImage="RealSize" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="206" y="51" width="160" height="41" uuid="f6d21295-5789-4d05-9043-e762c28c1afa">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR})+$F{COA_USERID}+".jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="206" y="78" width="160" height="1" forecolor="#000000" uuid="8a1ce466-9793-4fc4-97dc-53a7c982da7c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="372" y="63" width="122" height="14" uuid="6b1f8f29-f343-445d-a60b-dbbabb922d63">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_DATE}==null) ? null :"Date Approved: "+$P{DateTimeScriptlet_SCRIPTLET}.getLocalTime(
+$F{COA_DATE}, $F{REPORT_DATE_FORMAT}, $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="176" y="79" width="214" height="14" uuid="c84891d8-4240-431b-b708-4493c070e7c3">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COA_NAME}+(($F{COA_TITLE}!=null)?", "+$F{COA_TITLE}:"")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="96" width="310" height="15" uuid="8e575d83-0121-426e-8e41-6edbe802d1d5">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Note: this document is signed electronically by LIMS. Original signature is on file.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="103" width="110" height="14" uuid="2f0bddc9-4c7a-48e8-96d1-f0173e34e79c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Report build: "+$V{REPORT_VERSION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="" positionType="Float" mode="Transparent" x="0" y="24" width="572" height="18" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF" uuid="a25192e0-4d9e-44ac-b575-e34e228bb1b3">
+					<property name="local_mesure_unity" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{IS_BOVMTDPC} == "Y"]]></printWhenExpression>
+				</reportElement>
+				<box padding="0" topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Times NR LMS" size="6" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="117">
+			<line>
+				<reportElement x="0" y="3" width="572" height="1" forecolor="#AAAAAA" uuid="54979feb-227e-4baa-9faf-d5eaac6f2a91">
+					<property name="local_mesure_unity" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement key="" positionType="Float" mode="Transparent" x="0" y="24" width="572" height="18" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF" uuid="94e60121-7bca-4b0a-a079-daf05318afd4">
+					<property name="local_mesure_unity" value="pixel"/>
+					<printWhenExpression><![CDATA[AND($V{IS_BOVMTDPC} == "Y", $F{IS_REPORT_REV1}  .equals("Y")  )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0" topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Times NR LMS" size="6" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" firstLineIndent="0" leftIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0" tabStopWidth="40"/>
+				</textElement>
+				<text><![CDATA[BOVMTDPC - "Based On Verified Manufacturing, Testing, Documentation, and Process Controls." 
+Ingredients listing "BOVMTDPC" have been evaluated and are exempt from testing in accordance with 21 CFR 111.75 (d) (1).]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="45" width="572" height="1" forecolor="#AAAAAA" uuid="7bb38646-92f7-493e-84b9-a765e3ec8b3c"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="81" width="572" height="36" isPrintWhenDetailOverflows="true" forecolor="#CCCCCC" uuid="52033bbd-fe54-4ea7-a652-3e56e00baebf">
+					<printWhenExpression><![CDATA[$F{COA_VERSION}==null || $F{COA_TESTGUID}==null || $F{OPEN_REQUESTS}.intValue() > 0.0 ||  $F{COA_USERID}==null]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times NR LMS" size="30"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="0.5"/>
+				</textElement>
+				<text><![CDATA[DRAFT   DRAFT   DRAFT   DRAFT   DRAFT   DRAFT]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="48" width="100" height="14" uuid="dbdd712d-5e51-4f29-ba75-105012bc2d81"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_VERSION}==null||$F{COA_TESTGUID}==null||$F{OPEN_REQUESTS}.intValue()>(0))?"Version: DRAFT":"Version: "+$F{COA_VERSION}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="560" y="48" width="12" height="14" uuid="77aae834-5446-40b4-ad79-b8f33e86c197">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+				</reportElement>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Page">
+				<reportElement x="494" y="48" width="66" height="14" uuid="f57c4b8f-8f9b-43ea-b4c2-d1c7535ee0bb"/>
+				<box rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page: "+$V{PAGE_NUMBER}+" of "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="63" width="132" height="18" uuid="a14101e3-520d-4256-a5c6-f7ce9dbdf7b2">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUALITY CONTROL APPROVAL:]]></text>
+			</staticText>
+			<image scaleImage="RealSize" onErrorType="Blank" evaluationTime="Report">
+				<reportElement mode="Opaque" x="206" y="51" width="160" height="41" uuid="eecad27b-ae7e-4a19-a709-8a1c219457e9">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[($P{SUBREPORT_DIR}==null?"":$P{SUBREPORT_DIR})+$F{COA_USERID}+".jpg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="206" y="79" width="160" height="1" forecolor="#000000" uuid="ae084770-55a5-4ce6-a16c-ac00bb17c25a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="372" y="64" width="122" height="14" uuid="7f93bb3e-dfca-4fb1-a52a-1c659b33e46b">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{COA_DATE}==null) ? null :"Date Approved: "+$P{DateTimeScriptlet_SCRIPTLET}.getLocalTime(
+$F{COA_DATE}, $F{REPORT_DATE_FORMAT}, $P{LOCAL_TIME_NAME}, $P{REPORT_LOCALE})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="176" y="79" width="214" height="14" uuid="4e1562ae-2b46-451b-b934-1292f22a3e95">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COA_NAME}+(($F{COA_TITLE}!=null)?", "+$F{COA_TITLE}:"")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="125" y="96" width="310" height="15" uuid="7eb20f7d-b582-4ea1-8c9d-2336c430506f">
+					<printWhenExpression><![CDATA[($F{COA_VERSION}!=null&&$F{COA_TESTGUID}!=null&&$F{OPEN_REQUESTS}.intValue()==0.0&&$F{COA_USERID}!=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="7" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Note: this document is signed electronically by LIMS. Original signature is on file.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="103" width="110" height="14" uuid="19a98b14-da04-4560-b5de-516e860c462a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Report build: "+$V{REPORT_VERSION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" mode="Transparent" x="0" y="6" width="572" height="18" isRemoveLineWhenBlank="true" uuid="a490bdb1-27da-4303-ab79-197fee6f6b65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times NR LMS" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["The product specified above has been manufactured, packaged, tested and approved in accordance with the good manufacturing practices and VitaQuest approved standard operating procedures. Deviations from procedures have been reviewed, investigated, documented and approved by VitaQuest's Quality Assurance Department. The lot has met all the predetermined specifications and is released for shipment."]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<noData>
+		<band height="52">
+			<printWhenExpression><![CDATA[$V{REPORT_COUNT}==0]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="20" width="572" height="15" uuid="5e65f462-4b4d-4d2f-b42d-aadfe8c2ea35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times NR LMS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unable to generate COA for the selected request.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>
