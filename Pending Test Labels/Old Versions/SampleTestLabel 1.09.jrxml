@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PendingTests" columnCount="2" pageWidth="288" pageHeight="144" columnWidth="138" columnSpacing="8" leftMargin="2" rightMargin="2" topMargin="1" bottomMargin="0" isFloatColumnFooter="true" whenResourceMissingType="Error" uuid="33afcba4-9529-43df-b05e-a3dc1bf55e99">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="inch"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="205"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="787"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="590"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="401"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TST"/>
+	<style name="TestsBody" hTextAlign="Left" vTextAlign="Middle" isBlankWhenNull="true" fontName="LMS Arial" fontSize="8">
+		<box>
+			<pen lineWidth="0.0"/>
+			<bottomPen lineWidth="5.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph lineSpacing="Single" leftIndent="4" tabStopWidth="70">
+			<tabStop position="25" alignment="Right"/>
+		</paragraph>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{METHOD}==null]]></conditionExpression>
+			<style mode="Opaque" vTextAlign="Middle" fontSize="9">
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<paragraph leftIndent="3">
+					<tabStop position="20" alignment="Right"/>
+				</paragraph>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[OR($F{METHOD}.contains( "Minerals"),$F{METHOD}.contains( "Heavy Metals"),!$F{METHOD}.contains( "Prop 65"))]]></conditionExpression>
+			<style mode="Opaque" fontSize="8.5">
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<paragraph leftIndent="2">
+					<tabStop position="25" alignment="Right"/>
+				</paragraph>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="MethodHeader" mode="Opaque" hTextAlign="Left" vTextAlign="Top" rotation="None" isBlankWhenNull="true" fontName="LMS Arial" fontSize="7" isBold="true" isUnderline="true">
+		<box>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="0"/>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{METHOD}==null]]></conditionExpression>
+			<style mode="Opaque" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Serif" fontSize="8" isBold="true" isUnderline="true">
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<paragraph leftIndent="3" rightIndent="0" tabStopWidth="70"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{METHOD}.contains( "Prop 65" )]]></conditionExpression>
+			<style mode="Opaque" hTextAlign="Left" vTextAlign="Middle" rotation="None" fontName="Serif" fontSize="10" isBold="true" isUnderline="false">
+				<box topPadding="0" bottomPadding="4">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<paragraph leftIndent="3" rightIndent="0" tabStopWidth="70"/>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[OR($F{METHOD}.contains( "Minerals" ),$F{METHOD}.contains( "Send Out"),$F{METHOD}.equalsIgnoreCase("Heavy Metals"))]]></conditionExpression>
+			<style mode="Opaque" hTextAlign="Left" vTextAlign="Top" rotation="None" fontName="Serif" fontSize="7" isBold="true" isUnderline="true">
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<paragraph leftIndent="3" rightIndent="0" tabStopWidth="70"/>
+			</style>
+		</conditionalStyle>
+	</style>
+	<parameter name="SAMPLEGUID" class="java.util.List">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT Distinct
+ps.formulationid || nchr(160) || ps.batchnumber AS FORMULATION,
+
+REGEXP_replace(f.generic1, '(\s\((.*g)|Each |serving | contains?|one |two |three |four |five |six |seven |eight |nine |ten |:|\(|\))',' \2') AS SERVINGSIZE,
+
+ListAGG(LTrim(DECODE(t.testid,
+    'Heavy Metals',
+    DECODE(sm.METHODname,'Heavy Metals (Chemical Solutions)',chr(10),
+    		Decode(STR.REQUIREMENT,'Report Only','',DECODE(tr.resultid,
+        'Lead', 'Pb'||NCHR(160)||NCHR(160),
+        'Mercury', 'Hg'||NCHR(160)||NCHR(160),
+        'Cadmium', 'Cd'||NCHR(160)||NCHR(160),
+        'Arsenic', 'As'||NCHR(160)||NCHR(160),
+        tr.resultid
+       ) 
+     )
+    ||NCHR(160)||Decode(
+    	str.REQUIREMENT,'Report Only','',REGEXP_REPLACE(str.REQUIREMENT,'([0-9.,]+)\s(.*)','\1 \2')||chr(9)||' '||chr(9))
+    ),
+    'Manual Entry',
+    Case
+    when tr.resultid like '%Generic%'
+    Then i.Description
+    Else tr.resultid
+			end
+    
+    
+    ||':'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Gluten/Gliaden Allergen','Gluten ',
+    'Almond Allergen', 'Almond ',
+    'Crustacea Allergen', 'Crustacea ',
+    'Egg Allergen', 'Egg ',
+    'Milk Allergen', 'Milk ',
+    'Peanut Allergen', 'Peanut',
+    'Soy Allergen', 'Soy ',
+    'Walnut Allergen', 'Walnut ',
+    'Fish Allergen', 'Fish ',
+    'Pantothenic Acid UPLC', 'Pantothenic'||NCHR(160)||'Acid'||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Probiotics', 'Probiotics'||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1 \2'),
+    'Residual Solvents', SM.METHODNAME,
+   	
+    'Vitamin A', 'Vitamin'||NCHR(160)||'A'||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Vitamin D', 'Vitamin'||NCHR(160)||'D'||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Vitamin E', 'Vitamin'||NCHR(160)||'E'||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Vitamin K', 'Vitamin'||NCHR(160)||'K'||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    '5-MTHF', '5-MTHF'||NCHR(160)|| NCHR(9)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+			'Vitamin C', SM.METHODNAME||NCHR(160)||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Vitamin B12', 'Vitamin'||NCHR(160)||'B12'||NCHR(160)||NCHR(9)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2 '||NCHR(13)),
+    'Minerals',DECODE(tr.resultid,
+        'Boron', 'B',
+        'Calcium', 'Ca',
+        'Chromium', 'Cr',
+        'Copper', 'Cu',
+        'Iron', 'Fe',
+        'Potassium', 'K',
+        'Magnesium', 'Mg',
+        'Manganese', 'Mn',
+        'Molybdenum', 'Mo',
+        'Sodium', 'Na',
+        'Phosphorus', 'P',
+        'Selenium', 'Se',
+        'Vanadium', 'V',
+        'Zinc', 'Zn',
+        tr.resultid
+        )||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)','\1\2')||' '||NCHR(9),
+    tr.resultid||NCHR(160)||REGEXP_REPLACE(i.generic1,'([0-9.,]*)\s(.*)',' \1\2')||chr(13))),
+    '') 
+WITHIN GROUP (ORDER BY
+str.SEQNO
+
+)
+
+
+OVER (PARTITION by
+Case
+    WHEN t.methodid LIKE 'ICP-MS 232%'
+        then replace(sm.METHODID,'ICP-MS 232','Heavy Metals')
+    WHEN sm.METHODNAME LIKE '%Chemical Solutions%'
+        then CHR(13)||'Heavy Metal'||' ('||'Prop 65'||')'
+    When t.testid Like 'Heavy Metals' AND st.requirement = 'Report Only'
+        Then 'Heavy Metals' ||' ('||'Report Only'||')'
+    WHEN t.testid LIKE '%Minerals%'
+        then 'Minerals'
+    WHEN SM.DESCRIPTION LIKE '%ntertek%'
+        THEN 'Intertek'
+    WHEN SM.DESCRIPTION LIKE '%urofins%'
+        THEN 'eurofins'
+    WHEN t.testid LIKE '%llergen%'
+        THEN 'Allergens'
+    WHEN t.methodid LIKE '%Q Labs%'
+        THEN 'Q Labs'
+    ELSE
+    SM.DESCRIPTION
+END
+
+)
+AS TESTS,
+
+Case
+    WHEN t.methodid LIKE 'ICP-MS 232%'
+        then replace(sm.METHODID,'ICP-MS 232','Heavy Metals ') --||Decode(STR.REQUIREMENT,'Report Only',' (Report Only)','')
+    WHEN sm.METHODNAME LIKE '%Chemical Solutions%'
+        then 'Heavy Metal '||' (Prop 65)'
+   -- WHEN sm.METHODNAME LIKE '%Probiotic%'
+     --   then 'Probiotics'
+    When t.testid Like 'Heavy Metals' AND st.requirement = 'Report Only'
+        Then 'Heavy Metals' ||' (Report Only)'
+    WHEN t.testid LIKE '%Mineral%' OR t.methodid LIKE 'ICP-MS 231%'
+        then 'Minerals'
+    WHEN SM.DESCRIPTION LIKE '%ntertek%'
+        THEN 'Send Out (Intertek)'
+    WHEN SM.DESCRIPTION LIKE '%urofins%'
+        THEN 'Send Out (Eurofins)'
+    WHEN t.testid LIKE '%llergen%'
+        THEN 'Allergens'
+    WHEN t.methodid LIKE '%Q Labs%'
+        THEN 'Q Labs (Send Out)'
+    WHEN t.testid LIKE '%Manual Entry%'
+        THEN 'By Input'
+    ELSE
+    			''
+END As METHOD
+
+
+FROM
+  physicalsample ps
+  JOIN specification s ON s.specificationid = ps.specificationid
+    AND s.versionno = ps.specificationversionno
+  JOIN specificationtest st ON st.specificationid = s.specificationid
+    AND st.versionno = s.versionno
+  JOIN specificationtestresult str ON str.testguid = st.testguid
+    AND str.testid = st.testid
+    AND str.specificationid = st.specificationid
+    AND str.versionno = st.versionno
+  JOIN testresult tr ON tr.resultid = str.resultid
+    AND tr.sampleguid = ps.SAMPLEGUID
+  JOIN test t ON t.testguid = tr.testguid
+    AND t.testid = str.testid
+    AND t.methodid = st.methodid
+  JOIN smmethod sm ON sm.methodid = t.methodid
+    AND sm.versionno = t.methodversionno
+    AND sm.deletion = 'N'
+    AND t.configurationid NOT IN ('Stability', 'I, Retain', 'CT, Retain', 'F, Micro')
+  JOIN formulation f ON f.productid = ps.product
+    AND f.formulationid = s.formulationid
+  JOIN ingredient i ON i.formulationguid = f.formulationguid
+    AND i.ingredientid = tr.resultid
+
+WHERE
+
+ps.BATCHNUMBER = (select distinct ps1.BATCHNUMBER FROM PhysicalSample ps1 WHERE
+	 $X{IN,ps1.sampleguid,SAMPLEGUID})
+
+AND (t.status = 100 OR t.status = 500)
+AND st.Deletion <> 'Y'
+    AND (
+      (tr.flagvalid <> 'N' AND t.testid <> 'Minerals')
+      OR(t.testid = 'Minerals' AND
+          (','||SUbstr(tr.REASONFORCHANGE, 54)||','  LIKE '%,'||tr.GENERICNUM05||',%'AND tr.RESULTVALUATION = 'SKIP LOT' AND tr.flagvalid <> 'N')
+          OR (tr.COMMENTS like '%est%' AND tr.flagvalid <>  'N')
+          OR (tr.flagvalid = 'Y' AND resultValuation is null)
+      )
+    )
+
+Order By
+CASE
+WHEN METHOD LIKE '%Mineral%'
+    THEN 'a'
+When METHOD LIKE '%Probiotic%'
+    THEN 'b'
+When METHOD LIKE '%Prop 65%'
+    THEN 'y'
+When METHOD LIKE '%By Input%'
+ 	   THEN 'w'
+WHEN METHOD LIKE 'Heavy Metals%'
+	    THEN 'b'
+When METHOD LIKE '%Send Out%'
+    THEN 'z'
+ELSE
+	'c'
+END
+ASC]]>
+	</queryString>
+	<field name="FORMULATION" class="java.lang.String"/>
+	<field name="SERVINGSIZE" class="java.lang.String"/>
+	<field name="TESTS" class="java.lang.String"/>
+	<field name="METHOD" class="java.lang.String"/>
+	<variable name="REPORT_VERSION" class="java.lang.String">
+		<variableExpression><![CDATA["1.0.7"]]></variableExpression>
+		<initialValueExpression><![CDATA[]]></initialValueExpression>
+	</variable>
+	<columnHeader>
+		<band height="13" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="0" y="2" width="68" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3009bd98-6c91-4712-be7f-5446cf081d2a">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box leftPadding="2" rightPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="LMS Arial" size="9" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FORMULATION}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="" positionType="Float" isPrintRepeatedValues="false" mode="Opaque" x="67" y="2" width="71" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="6e9d2ca7-6bfd-495a-8ca3-34c876a09d68">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box leftPadding="1" bottomPadding="0" rightPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom" rotation="None">
+					<font fontName="DejaVu Sans" size="8" isBold="true" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERVINGSIZE}.trim()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="11">
+			<printWhenExpression><![CDATA[OR($F{METHOD}.contains( "Send Out" ), $F{METHOD}.contains( "Prop 65" ))]]></printWhenExpression>
+			<break type="Column">
+				<reportElement positionType="Float" x="0" y="0" width="100" height="1" uuid="ebf1e241-d489-4f29-9e53-92328447e39e">
+					<printWhenExpression><![CDATA[OR($F{METHOD}.contains( "Send Out" ), $F{METHOD}.contains( "Prop 65" ))]]></printWhenExpression>
+				</reportElement>
+			</break>
+			<textField isStretchWithOverflow="true" evaluationTime="Column" isBlankWhenNull="true">
+				<reportElement key="" positionType="FixRelativeToBottom" isPrintRepeatedValues="false" mode="Transparent" x="67" y="0" width="71" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="1918821e-5ae9-4d9b-a5f0-010a825a5943">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box leftPadding="1" bottomPadding="0" rightPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom" rotation="None">
+					<font fontName="DejaVu Sans" size="8" isBold="true" isItalic="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SERVINGSIZE}.trim()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" evaluationTime="Column" isBlankWhenNull="true">
+				<reportElement key="" positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" isPrintRepeatedValues="false" mode="Transparent" x="0" y="0" width="67" height="11" isRemoveLineWhenBlank="true" backcolor="#FFFFFF" uuid="3e54dbd6-e541-428a-9cea-c3e72b778852">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<printWhenExpression><![CDATA[OR($F{METHOD}.contains( "Send Out" ), $F{METHOD}.contains( "Prop 65" ))]]></printWhenExpression>
+				</reportElement>
+				<box leftPadding="2" rightPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" rotation="None">
+					<font fontName="LMS Arial" size="8" isBold="true" isUnderline="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FORMULATION}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="22" splitType="Prevent">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="" style="MethodHeader" isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="138" height="8" isRemoveLineWhenBlank="true" uuid="29fa159d-18cc-4679-af16-77e796b91c97">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="LMS Arial" isUnderline="false"/>
+					<paragraph firstLineIndent="0">
+						<tabStop position="20" alignment="Right"/>
+					</paragraph>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{METHOD}==""?null:$F{METHOD})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TestsBody" isPrintRepeatedValues="false" mode="Opaque" x="0" y="8" width="138" height="14" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" uuid="f14f2349-52d9-464e-8e78-68a346b70a53">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="0">
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="LMS Arial" isBold="false" isUnderline="false"/>
+					<paragraph lineSpacing="Single" tabStopWidth="10">
+						<tabStop position="0" alignment="Left"/>
+						<tabStop position="70" alignment="Center"/>
+						<tabStop position="136" alignment="Right"/>
+					</paragraph>
+				</textElement>
+				<textFieldExpression><![CDATA[TRIM($F{TESTS}==null?"":$F{TESTS})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
